@@ -1,0 +1,337 @@
+{
+    "system_role": {
+        "identity": "You are an AI assistant embedded in Amritanshu Yadav’s portfolio website.",
+        "tone": "Clear, professional, and concise. Adapt depth based on the question.",
+        "instruction": "Answer questions about Amritanshu’s background, projects, skills, achievements, education, hobbies, and career goals accurately and confidently."
+    },
+    "profile": {
+        "name": "Amritanshu Yadav",
+        "location": "India",
+        "role": "AI Engineer | Machine Learning Engineer | Software Engineer",
+        "background": "I am a final-year B.Tech student specializing in AI, Machine Learning, and Software Engineering, with strong foundations in algorithms, distributed systems, and scalable applications. I work on building real-world AI systems across healthcare, recommendation systems, document intelligence, and full-stack platforms, with experience spanning model optimization, GenAI pipelines, and production deployment.",
+        "strengths": [
+            "Applied AI over theory-heavy research",
+            "End-to-end ownership (model → backend → UI)",
+            "Calm problem-solving under pressure",
+            "Strong system thinking"
+        ],
+        "career_goals": {
+            "interests": [
+                "Applied AI",
+                "GenAI systems",
+                "Document AI",
+                "Recommendation systems",
+                "Scalable backend engineering"
+            ],
+            "long_term": "Build impactful AI systems used by real users. Work on production-grade AI, not just demos."
+        }
+    },
+    "technical_skills": {
+        "languages": [
+            "Python",
+            "C++",
+            "JavaScript",
+            "SQL"
+        ],
+        "ai_ml": [
+            "Machine Learning",
+            "Deep Learning",
+            "CNNs",
+            "NLP",
+            "Transformers",
+            "LLMs",
+            "GenAI",
+            "RAG",
+            "FAISS"
+        ],
+        "frameworks": [
+            "TensorFlow",
+            "PyTorch",
+            "Scikit-learn",
+            "LangChain",
+            "LangGraph",
+            "Flask",
+            "FastAPI",
+            "React",
+            "Next.js"
+        ],
+        "systems": [
+            "REST APIs",
+            "Databases",
+            "Model Optimization",
+            "Edge AI",
+            "Deployment"
+        ]
+    },
+    "education": [
+        {
+            "degree": "B.Tech in Electronics & Communication Engineering",
+            "institution": "International Institute of Information Technology, Naya Raipur",
+            "year": "2022 – 2026",
+            "focus": [
+                "Data Structures & Algorithms",
+                "Operating Systems",
+                "DBMS",
+                "Machine Learning",
+                "Distributed Systems"
+            ]
+        }
+    ],
+    "achievements": [
+        {
+            "title": "IEEE CCNCPS 2025 (Dubai)",
+            "description": "Published peer-reviewed research on AI cataract detection."
+        },
+        {
+            "title": "Amazon ML Summer School 2025",
+            "description": "Selected top 3000 from 60,000+ applicants. Trained in Generative AI, Deep Learning, Reinforcement Learning."
+        },
+        {
+            "title": "Smart India Hackathon 2024",
+            "description": "Team Lead — Built AYUSH healthcare portal. Reduced paperwork by 50%."
+        },
+        {
+            "title": "Woodpecker Hackathon 2024",
+            "description": "Team Head — Text-to-SQL AI system."
+        }
+    ],
+    "hobbies": [
+        {
+            "name": "Cricket",
+            "details": "Inspired by MS Dhoni. Values calm decision-making under pressure and team-oriented mindset."
+        },
+        {
+            "name": "Chess",
+            "details": "Chess.com Rapid ~1450+ (Top ~10% globally). Strategic thinking, patience, foresight."
+        }
+    ],
+    "projects": [
+        {
+            "name": "Cvision",
+            "keywords": [
+                "cvision",
+                "cataract",
+                "eye",
+                "medical",
+                "mobile",
+                "flutter",
+                "offline"
+            ],
+            "description": "Flagship offline-first medical AI. Real-world impact with clinically validated deployment.",
+            "tech_stack": [
+                "Flutter",
+                "TFLite",
+                "MobileNetV2",
+                "IEEE Published"
+            ],
+            "details": {
+                "problem": "Lack of accessible eye-care in remote areas.",
+                "solution": "Quantized CNN pipeline running locally on Android.",
+                "architecture": "MobileNetV2 (Quantized) -> TFLite -> Flutter Interface.",
+                "algorithms": "MobileNetV2, VGG19, DenseNet (Benchmarked).",
+                "metrics": "95% Accuracy. Low-latency edge inference."
+            }
+        },
+        {
+            "name": "HealthAI",
+            "keywords": [
+                "healthai",
+                "doctor",
+                "chat",
+                "medical",
+                "gemini",
+                "rag"
+            ],
+            "description": "End-to-end GenAI healthcare system. Real-time consults & document intelligence.",
+            "tech_stack": [
+                "Gemini Vision",
+                "RAG",
+                "Next.js",
+                "WebSockets",
+                "Flask",
+                "MongoDB"
+            ],
+            "details": {
+                "problem": "Fragmented medical data & slow retrieval.",
+                "solution": "Unified dashboard with VLM & Chat agents. Symptom checking, drug discovery, mental health screening.",
+                "architecture": "Microservices (Flask + Next.js). RAG for medical reports.",
+                "algorithms": "Gemini Vision for X-rays. OCR for reports.",
+                "metrics": "Seamless doctor-patient communication."
+            }
+        },
+        {
+            "name": "Amazon Product Recommendation & Reviews Analysis",
+            "keywords": [
+                "amazon",
+                "recsys",
+                "recommendation",
+                "reviews",
+                "shop",
+                "faiss"
+            ],
+            "description": "Vector-search powered recommendation engine with 100M+ review analysis.",
+            "tech_stack": [
+                "FAISS",
+                "Gemini API",
+                "NLP",
+                "React",
+                "Python"
+            ],
+            "details": {
+                "problem": "Standard recs lack explainability. 100M+ reviews are hard to analyze.",
+                "solution": "Hybrid RAG (Vector + LLM) for transparent suggestions. Distributed NLP pipeline.",
+                "architecture": "FAISS for vector search. Gemini for re-ranking. LDA for topic modeling.",
+                "algorithms": "Cosine Similarity, Latent Dirichlet Allocation (LDA), Custom Price-Review Score.",
+                "metrics": "Reduced search latency by 40%. Identified 5 key sentiment clusters."
+            }
+        },
+        {
+            "name": "TribeBharat",
+            "keywords": [
+                "tribe",
+                "tribebharat",
+                "ecommerce",
+                "django",
+                "shop"
+            ],
+            "description": "Robust e-commerce backend handling payments, auth, and admin workflows.",
+            "tech_stack": [
+                "Django",
+                "PostgreSQL",
+                "Razorpay",
+                "Redis",
+                "React"
+            ],
+            "details": {
+                "problem": "Need for scalable specialized marketplace.",
+                "solution": "Monolithic Django app with optimized ORM. OTP Auth, Cloudinary media.",
+                "architecture": "Django MVC, Redis Caching, Razorpay Integration.",
+                "algorithms": "Database Indexing.",
+                "metrics": "1000+ concurrent users, secure payments."
+            }
+        },
+        {
+            "name": "Visaire",
+            "keywords": [
+                "visaire",
+                "video",
+                "animation",
+                "agent",
+                "manim"
+            ],
+            "description": "Innovative text-to-animation generator using multi-agent workflows.",
+            "tech_stack": [
+                "LangGraph",
+                "Manim",
+                "LLM Agents",
+                "FastAPI"
+            ],
+            "details": {
+                "problem": "Video creation is manual & slow.",
+                "solution": "Agentic code generation pipeline. Converts text -> Manim code -> Video.",
+                "architecture": "LangGraph Multi-Agent System.",
+                "algorithms": "ReAct Pattern.",
+                "metrics": "Automated educational video production."
+            }
+        },
+        {
+            "name": "Movie Recommendation System",
+            "keywords": [
+                "movie",
+                "cinema",
+                "film",
+                "recommendation",
+                "svd"
+            ],
+            "description": "Hybrid recommender combining collaborative filtering & content metadata.",
+            "tech_stack": [
+                "Scikit-learn",
+                "SVD",
+                "Pandas",
+                "Streamlit",
+                "TMDB API"
+            ],
+            "details": {
+                "problem": "Generic recs ignore niche tastes.",
+                "solution": "Matrix Factorization (SVD) + Content Similarity.",
+                "architecture": "Content-based (Metadata) + Collaborative (User-Item Matrix).",
+                "algorithms": "SVD, Cosine Similarity.",
+                "metrics": "RMSE 0.85 on test set. MAE reduced ~21%."
+            }
+        },
+        {
+            "name": "Academia Chatbot",
+            "keywords": [
+                "academia",
+                "bot",
+                "college",
+                "nlp",
+                "query"
+            ],
+            "description": "Intent-based university query bot using proprietary NLP models.",
+            "tech_stack": [
+                "Python",
+                "NLTK",
+                "Flask",
+                "TensorFlow"
+            ],
+            "details": {
+                "problem": "Campus info is hard to find.",
+                "solution": "Bag-of-Words intent classifier.",
+                "architecture": "Feed-forward Neural Net for intent classification.",
+                "algorithms": "Bag-of-Words, Softmax.",
+                "metrics": "95% accuracy on student queries. Latency reduced by 50%."
+            }
+        },
+        {
+            "name": "Text-to-SQL System",
+            "keywords": [
+                "sql",
+                "database",
+                "query",
+                "text",
+                "llm"
+            ],
+            "description": "Natural language to SQL converter using LLMs.",
+            "tech_stack": [
+                "LLMs",
+                "Python"
+            ],
+            "details": {
+                "problem": "Non-tech users struggle with SQL.",
+                "solution": "NL -> SQL generation pipeline.",
+                "architecture": "Prompt Engineering + Schema Injection.",
+                "algorithms": "Few-shot prompting.",
+                "metrics": "~90% precision."
+            }
+        },
+        {
+            "name": "Store Ratings Application",
+            "keywords": [
+                "store",
+                "ratings",
+                "rbac",
+                "retail"
+            ],
+            "description": "Role-based analytics system for retail chains.",
+            "tech_stack": [
+                "React",
+                "Express",
+                "MySQL",
+                "RBAC"
+            ],
+            "details": {
+                "problem": "Insecure, manual Excel-based performance tracking.",
+                "solution": "RBAC dashboard with real-time SQL analytics.",
+                "architecture": "Client-Server Rest API.",
+                "algorithms": "Role-Based Access Control logic.",
+                "metrics": "Secure access for 50+ store owners."
+            }
+        }
+    ],
+    "contact": {
+        "email": "amritanshuyadav@example.com",
+        "github": "github.com/TechNxt05",
+        "linkedin": "linkedin.com/in/amritanshu"
+    }
+}
