@@ -36,8 +36,8 @@ export function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Button variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
-                        Resume
+                    <Button asChild variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
+                        <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank">Resume</Link>
                     </Button>
                 </div>
 
@@ -69,8 +69,8 @@ export function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            Download Resume
+                        <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank">Resume</Link>
                         </Button>
                     </motion.div>
                 )}
