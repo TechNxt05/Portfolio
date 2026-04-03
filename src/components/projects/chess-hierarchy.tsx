@@ -67,7 +67,8 @@ const projects: Project[] = [
         icon: Shield,
         color: "text-red-500",
         links: [
-            { type: "github", url: "https://github.com/TechNxt05/CyberGuardAI" }
+            { type: "github", url: "https://github.com/TechNxt05/CyberGuard" },
+            { type: "live", url: "https://cyber-guard-liard.vercel.app/" }
         ]
     },
     {

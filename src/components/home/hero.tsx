@@ -94,7 +94,10 @@ export function Hero() {
                             <Link href="#projects">Explore Projects</Link>
                         </Button>
                         <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-lg font-medium border-white/10 hover:bg-white/5 w-full sm:w-auto">
-                            <Link href="#contact">Contact Me</Link>
+                            <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank">View Resume</Link>
+                        </Button>
+                        <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-lg font-medium border-white/10 hover:bg-white/5 w-full sm:w-auto">
+                            <Link href="#contact">Contact</Link>
                         </Button>
                     </motion.div>
                 </motion.div>

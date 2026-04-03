@@ -31,6 +31,14 @@ const achievements = [
         tag: "Research",
     },
     {
+        title: "Amazon ML Summer School",
+        event: "ML Trainee | Aug 2025",
+        description: "Selected among top 3,000 from 60,000+ applicants. Trained in Generative AI, Deep Learning & Reinforcement Learning.",
+        icon: <Star className="h-10 w-10 text-purple-500" />,
+        color: "purple",
+        tag: "Select Program",
+    },
+    {
         title: "Smart India Hackathon",
         event: "Team Lead 2024",
         description: "Built AYUSH healthcare portal with chatbot integration. Reduced paperwork by 50%.",
