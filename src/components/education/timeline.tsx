@@ -10,7 +10,7 @@ const education = [
         institution: "International Institute of Information Technology, Naya Raipur",
         degree: "B.Tech in Electronics and Communication Engineering",
         duration: "2022 – 2026",
-        score: "CGPA: 7.57",
+        score: "CGPA: 7.72",
         details: ["Data Structures & Algorithms", "Operating Systems", "DBMS", "System Design", "Machine Learning"],
         icon: <GraduationCap className="text-primary" size={24} />,
         active: true,
@@ -18,7 +18,7 @@ const education = [
     {
         institution: "City Montessori School, Lucknow",
         degree: "Class XII (ISC)",
-        duration: "2022",
+        duration: "2021",
         score: "95.8%",
         details: ["Physics", "Chemistry", "Mathematics", "Computer Science"],
         icon: <School className="text-blue-400" size={24} />,
@@ -27,7 +27,7 @@ const education = [
     {
         institution: "City Montessori School, Lucknow",
         degree: "Class X (ICSE)",
-        duration: "2020",
+        duration: "2019",
         score: "93%",
         details: ["Science", "Mathematics", "Computer Applications"],
         icon: <School className="text-blue-400" size={24} />,

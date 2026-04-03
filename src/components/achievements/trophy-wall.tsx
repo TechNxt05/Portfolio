@@ -7,6 +7,22 @@ import { Badge } from "@/components/ui/badge";
 
 const achievements = [
     {
+        title: "DRDO",
+        event: "Research Intern | Jan 2026 - Present",
+        description: "Developed a native multithreaded Win32 application for real-time avionics telemetry monitoring.",
+        icon: <Award className="h-10 w-10 text-orange-500" />,
+        color: "orange",
+        tag: "Experience",
+    },
+    {
+        title: "XelronAI",
+        event: "SDE Intern | Jan 2026 - Mar 2026",
+        description: "Engineered eval pipelines for LLM-generated code and built Docker benchmarking environments.",
+        icon: <Star className="h-10 w-10 text-blue-500" />,
+        color: "blue",
+        tag: "Experience",
+    },
+    {
         title: "IEEE Publication",
         event: "CCNCPS 2025 (Dubai)",
         description: "Published peer-reviewed research 'Cvision: A Deep Learning Framework for Cataract Detection via Smartphone'.",
@@ -15,28 +31,12 @@ const achievements = [
         tag: "Research",
     },
     {
-        title: "Amazon ML Summer School",
-        event: "Selected Top 3000",
-        description: "Trained in Generative AI, Deep Learning, and Reinforcement Learning from 60,000+ applicants.",
-        icon: <Award className="h-10 w-10 text-orange-500" />,
-        color: "orange",
-        tag: "Select Program",
-    },
-    {
         title: "Smart India Hackathon",
         event: "Team Lead 2024",
         description: "Built AYUSH healthcare portal with chatbot integration. Reduced paperwork by 50%.",
-        icon: <Medal className="h-10 w-10 text-blue-500" />,
-        color: "blue",
+        icon: <Medal className="h-10 w-10 text-green-500" />,
+        color: "green",
         tag: "Winner",
-    },
-    {
-        title: "Woodpecker Hackathon",
-        event: "Team Head 2024",
-        description: "Developed AI-powered Text-to-SQL system with ~90% precision.",
-        icon: <Star className="h-10 w-10 text-purple-500" />,
-        color: "purple",
-        tag: "Finalist",
     },
 ];
 
@@ -50,7 +50,7 @@ export function TrophyWall() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-16 text-center">
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">
-                        Achievements
+                        Experience & Achievements
                     </h2>
                 </div>
 

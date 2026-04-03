@@ -53,6 +53,42 @@ interface Project {
 const projects: Project[] = [
     // --- Tier 1: Flagship (Kings) ---
     {
+        id: "cyberguardai",
+        title: "CyberGuardAI",
+        type: "King",
+        role: "Cybercrime Resolution Platform",
+        tech: ["LangGraph", "LLMs", "Multi-Agent Systems"],
+        description: "Agentic cybersecurity platform assisting victims of UPI fraud, identity theft, and ransomware.",
+        details: {
+            problem: "Complex forensics and recovery for cybercrime victims.",
+            solution: "Multi-agent workflow orchestrating web search and reasoning tools for investigation.",
+            outcome: "Source-grounded responses with citation validation to reduce hallucination risk."
+        },
+        icon: Shield,
+        color: "text-red-500",
+        links: [
+            { type: "github", url: "https://github.com/TechNxt05/CyberGuardAI" }
+        ]
+    },
+    {
+        id: "ragops",
+        title: "RAGOps",
+        type: "King",
+        role: "Enterprise-Grade RAG Platform",
+        tech: ["Next.js", "FastAPI", "LangChain", "PostgreSQL"],
+        description: "Secure document ingestion platform preventing cross-domain data leakage.",
+        details: {
+            problem: "Data leakage across Legal, HR, and Engineering knowledge bases.",
+            solution: "Project-level knowledge isolation and RBAC with explainable AI chat.",
+            outcome: "Chunk-level citations and multi-model orchestration matching latency & quality."
+        },
+        icon: Database,
+        color: "text-blue-500",
+        links: [
+            { type: "github", url: "https://github.com/TechNxt05/RAGOps" }
+        ]
+    },
+    {
         id: "cvision",
         title: "Cvision",
         type: "King",
@@ -62,49 +98,12 @@ const projects: Project[] = [
         details: {
             problem: "Lack of accessible eye-care in remote areas.",
             solution: "Quantized CNN pipeline running locally on Android.",
-            outcome: "92% Accuracy, low-latency edge inference."
+            outcome: "95%+ Accuracy, low-latency edge inference."
         },
         icon: Eye,
-        color: "text-blue-400",
-        links: [
-            { type: "github", url: "https://github.com/TechNxt05/Cvision" }
-        ]
-    },
-    {
-        id: "healthai",
-        title: "HealthAI",
-        type: "King",
-        role: "Multimodal Health Platform",
-        tech: ["Gemini Vision", "RAG", "Next.js", "WebSockets"],
-        description: "End-to-end GenAI healthcare system. Real-time consults & document intelligence.",
-        details: {
-            problem: "Fragmented medical data & slow retrieval.",
-            solution: "Unified dashboard with VLM & Chat agents.",
-            outcome: "Seamless doctor-patient communication."
-        },
-        icon: Activity,
-        color: "text-red-400",
-        links: [
-            { type: "github", url: "https://github.com/TechNxt05/HealthAI" }
-        ]
-    },
-    {
-        id: "amazon-intel",
-        title: "Amazon Intelligence",
-        type: "King",
-        role: "Applied GenAI & Data",
-        tech: ["FAISS", "Gemini API", "NLP", "React"],
-        description: "Vector-search powered recommendation engine with 100M+ review analysis.",
-        details: {
-            problem: "Standard recs lack explainability.",
-            solution: "Hybrid RAG (Vector + LLM) for transparent suggestions.",
-            outcome: "High-precision, explainable product discovery."
-        },
-        icon: ShoppingCart,
         color: "text-amber-500",
         links: [
-            { type: "github", url: "https://github.com/TechNxt05/Amazon-Recommendation-System", label: "RecSys" },
-            { type: "github", url: "https://github.com/TechNxt05/Amazon-Review-Analysis-2018", label: "Analysis" }
+            { type: "github", url: "https://github.com/TechNxt05/Cvision" }
         ]
     },
 
@@ -113,18 +112,37 @@ const projects: Project[] = [
         id: "tribebharat",
         title: "TribeBharat",
         type: "Queen",
-        role: "Production E-commerce",
-        tech: ["Django", "PostgreSQL", "Razorpay", "Redis"],
-        description: "Robust e-commerce backend handling payments, auth, and admin workflows.",
+        role: "Production E-commerce Platform",
+        tech: ["Django", "React", "PostgreSQL", "Razorpay"],
+        description: "Contributed to a live Django + React e-commerce platform handling payments and admin workflows.",
         details: {
-            problem: "Need for scalable specialized marketplace.",
-            solution: "Monolithic Django app with optimized ORM.",
-            outcome: "1000+ concurrent users, secure payments."
+            problem: "Need for scalable specialized marketplace with complex admin flows.",
+            solution: "Feature integration, OTP/JWT authentication, and AWS EC2 deployment with Nginx.",
+            outcome: "Secure, reliable, and scalable production hosting."
         },
-        icon: Globe,
+        icon: ShoppingCart,
         color: "text-orange-400",
         links: [
             { type: "live", url: "https://www.tribebharat.com" }
+        ]
+    },
+    {
+        id: "amazon-intel",
+        title: "Amazon Intelligence",
+        type: "Queen",
+        role: "Applied GenAI & Data",
+        tech: ["FAISS", "Gemini API", "NLP", "React"],
+        description: "Vector-search powered recommendation engine with 100M+ review analysis.",
+        details: {
+            problem: "Standard recs lack explainability.",
+            solution: "Hybrid RAG (Vector + LLM) for transparent suggestions.",
+            outcome: "High-precision, explainable product discovery."
+        },
+        icon: Globe,
+        color: "text-purple-400",
+        links: [
+            { type: "github", url: "https://github.com/TechNxt05/Amazon-Recommendation-System", label: "RecSys" },
+            { type: "github", url: "https://github.com/TechNxt05/Amazon-Review-Analysis-2018", label: "Analysis" }
         ]
     },
     {
@@ -140,47 +158,29 @@ const projects: Project[] = [
             outcome: "Automated educational video production."
         },
         icon: Video,
-        color: "text-purple-400",
-        links: [
-            { type: "github", url: "https://github.com/TechNxt05/Visiare" }
-        ]
-    },
-    {
-        id: "movie-recs",
-        title: "Movie RecSys",
-        type: "Queen",
-        role: "Classical ML System",
-        tech: ["Scikit-learn", "SVD", "Pandas", "Streamlit"],
-        description: "Hybrid recommender combining collaborative filtering & content metadata.",
-        details: {
-            problem: "Generic recs ignore niche tastes.",
-            solution: "Matrix Factorization (SVD) + Content Similarity.",
-            outcome: "RMSE 0.85 on test set."
-        },
-        icon: Film,
         color: "text-cyan-400",
         links: [
-            { type: "github", url: "https://github.com/TechNxt05/Movie-Recommendation-System" }
+            { type: "github", url: "https://github.com/TechNxt05/Visiare" }
         ]
     },
 
     // --- Tier 3: Supporting (Rooks) ---
     {
-        id: "academia-bot",
-        title: "Academia Chatbot",
+        id: "healthai",
+        title: "HealthAI",
         type: "Rook",
-        role: "NLP Fundamentals",
-        tech: ["Python", "NLTK", "Flask", "TensorFlow"],
-        description: "Intent-based university query bot using proprietary NLP models.",
+        role: "Multimodal Health Platform",
+        tech: ["Gemini Vision", "RAG", "Next.js", "WebSockets"],
+        description: "End-to-end GenAI healthcare system. Real-time consults & document intelligence.",
         details: {
-            problem: "Campus info is hard to find.",
-            solution: "Bag-of-Words intent classifier.",
-            outcome: "95% accuracy on student queries."
+            problem: "Fragmented medical data & slow retrieval.",
+            solution: "Unified dashboard with VLM & Chat agents.",
+            outcome: "Seamless doctor-patient communication."
         },
-        icon: BookOpen,
-        color: "text-green-400",
+        icon: Activity,
+        color: "text-emerald-400",
         links: [
-            { type: "github", url: "https://github.com/TechNxt05/Academia" }
+            { type: "github", url: "https://github.com/TechNxt05/HealthAI" }
         ]
     }
 ];

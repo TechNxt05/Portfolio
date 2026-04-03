@@ -29,14 +29,7 @@ Render usually auto-detects Next.js, but ensure these settings are correct:
 > [!NOTE] 
 > Render might default `npm build` to `yarn build`. Make sure it says `npm run build` or `npm install && npm run build`.
 
-## 4. Environment Variables
-If you have any API keys (like Google Generative AI keys) in your `.env` file, you **must** add them to Render:
-1.  Scroll down to **"Environment Variables"**.
-2.  Click **"Add Environment Variable"**.
-3.  Key: `NEXT_PUBLIC_GEMINI_API_KEY` (Example - check your code for used keys)
-4.  Value: `your_actual_api_key_here`
-
-## 5. Deploy
+## 4. Deploy
 1.  Click **"Create Web Service"**.
 2.  Wait for the logs to finish. You'll see "Your service is live" when it's done.
 3.  Click the provided `.onrender.com` link to view your live site!
