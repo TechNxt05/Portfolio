@@ -1,254 +1,411 @@
 {
-    "system_role": {
-        "identity": "You are an AI assistant embedded in Amritanshu Yadav\u2019s portfolio website.",
-        "tone": "Clear, professional, and concise. Adapt depth based on the question.",
-        "instruction": "Answer questions about Amritanshu\u2019s background, projects, skills, achievements, education, hobbies, and career goals accurately and confidently."
-    },
-    "profile": {
-        "name": "Amritanshu Yadav",
-        "location": "India",
-        "role": "AI Engineer | Machine Learning Engineer | Software Engineer",
-        "background": "I am a final-year B.Tech student specializing in AI, Machine Learning, and Software Engineering, with strong foundations in algorithms, distributed systems, and scalable applications. I work on building real-world AI systems across healthcare, recommendation systems, document intelligence, and full-stack platforms, with experience spanning model optimization, GenAI pipelines, and production deployment.",
-        "strengths": [
-            "Applied AI over theory-heavy research",
-            "End-to-end ownership (model \u2192 backend \u2192 UI)",
-            "Calm problem-solving under pressure",
-            "Strong system thinking"
-        ],
-        "career_goals": {
-            "interests": [
-                "Applied AI",
-                "GenAI systems",
-                "Document AI",
-                "Recommendation systems",
-                "Scalable backend engineering"
-            ],
-            "long_term": "Build impactful AI systems used by real users. Work on production-grade AI, not just demos."
-        }
-    },
-    "technical_skills": {
-        "languages": [
-            "C++",
-            "Python",
-            "Java",
-            "JavaScript",
-            "TypeScript",
-            "HTML",
-            "CSS"
-        ],
-        "systems": [
-            "Unix/Linux",
-            "Git",
-            "GitHub",
-            "Docker",
-            "Jira",
-            "Bitbucket",
-            "Postman",
-            "Cloudinary",
-            "AWS EC2",
-            "Nginx",
-            "Win32"
-        ],
-        "frameworks": [
-            "React.js",
-            "Next.js",
-            "Node.js",
-            "Express.js",
-            "Flask",
-            "FastAPI",
-            "Django",
-            "TailwindCSS"
-        ],
-        "ai_ml": [
-            "TensorFlow",
-            "PyTorch",
-            "Scikit-learn",
-            "OpenCV",
-            "HuggingFace Transformers",
-            "LangChain",
-            "LLMs"
-        ],
-        "databases": [
-            "MongoDB",
-            "MySQL",
-            "PostgreSQL",
-            "NoSQL",
-            "Firebase",
-            "SQLite"
-        ],
-        "coursework": [
-            "Data Structures & Algorithms",
-            "Operating Systems",
-            "DBMS",
-            "System Design",
-            "Machine Learning"
-        ]
-    },
-    "education": [
-        {
-            "degree": "B.Tech in Electronics & Communication Engineering",
-            "institution": "International Institute of Information Technology, Naya Raipur",
-            "year": "2022 \u2013 2026",
-            "focus": [
-                "Data Structures & Algorithms",
-                "Operating Systems",
-                "DBMS",
-                "Machine Learning",
-                "System Design"
-            ]
-        },
-        {
-            "degree": "Class XII (ISC)",
-            "institution": "City Montessori School, Lucknow",
-            "year": "2021",
-            "focus": [
-                "95.8%"
-            ]
-        },
-        {
-            "degree": "Class X (ICSE)",
-            "institution": "City Montessori School, Lucknow",
-            "year": "2021",
-            "focus": [
-                "93%"
-            ]
-        }
+  "system_role": {
+    "identity": "You are an AI assistant embedded in Amritanshu Yadav's portfolio website.",
+    "tone": "Sleek, highly technical, systems-oriented, and authoritative. Speak like a senior AI infrastructure engineer.",
+    "instruction": "Respond to queries about Amritanshu's professional experience, technical stack, flagship systems (AuditAI, Aegis-Agent, CyberGuardAI, RAGOps, DataPilot), research publications, and career focus. Emphasize production readiness, deterministic evaluation, and agent safety."
+  },
+  "profile": {
+    "name": "Amritanshu Yadav",
+    "location": "India",
+    "role": "AI Systems & Infrastructure Engineer",
+    "headline": "AI Engineer · LLM Systems · RAG · Multi-Agent · Backend Infrastructure",
+    "short_description": "I build production-grade AI systems focused on LLM pipelines, AI reliability, RAG architectures, and multi-agent workflows. Currently working on deployed AI infrastructure, evaluation systems, and autonomous agent platforms.",
+    "background": "I am a final-year B.Tech student specializing in AI systems engineering, RAG pipelines, and high-performance backend infrastructure. I replace brittle AI wrappers with robust, deterministic pipelines, building self-healing agentic workflows, runtime safety firewalls, and complex multithreaded systems. Currently focused on AI reliability and production-grade agent security.",
+    "strengths": [
+      "Deterministic LLM evaluation over randomized LLM-as-judge benchmarks",
+      "End-to-end system ownership (C++/Python core backend to high-performance reactive frontends)",
+      "Avionics-grade concurrency and real-time execution safety",
+      "Zero-trust runtime middleware architecture for autonomous agents"
     ],
-    "achievements": [
-        {
-            "title": "IEEE CCNCPS 2025 (Dubai)",
-            "description": "Published peer-reviewed research on CNN-based cataract detection system."
-        },
-        {
-            "title": "Smart India Hackathon 2024",
-            "description": "Team Lead \u2014 Built AYUSH healthcare portal. Reduced paperwork by 50%."
-        }
+    "career_goals": {
+      "interests": [
+        "LLM Reliability & Evaluation Systems",
+        "Multi-Agent Orchestration & State Trees",
+        "High-Performance Vector Storage & Citation Retrieval",
+        "Deterministic Telemetry & Avionics Concurrency",
+        "Bilingual AI Systems (English/Arabic)"
+      ],
+      "long_term": "Build robust, industrial-strength AI platforms that scale seamlessly, operate deterministically under pressure, and remain completely secure against adversarial vector injection."
+    }
+  },
+  "technical_skills": {
+    "ai_ml": [
+      "LangGraph",
+      "LangChain",
+      "PyTorch",
+      "TensorFlow",
+      "Gemini Pro/Flash SDK",
+      "GPT-4o",
+      "Groq",
+      "HuggingFace Transformers",
+      "SentenceTransformers",
+      "FAISS",
+      "pgvector",
+      "Scikit-learn"
     ],
-    "hobbies": [
-        {
-            "name": "Cricket",
-            "details": "Inspired by MS Dhoni. Values calm decision-making under pressure and team-oriented mindset."
-        },
-        {
-            "name": "Chess",
-            "details": "Chess.com Rapid ~1450+ (Top ~10% globally). Strategic thinking, patience, foresight."
-        }
+    "backend": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "Flask",
+      "Node.js",
+      "Express.js",
+      "C++ (Win32 Concurrency)",
+      "WebSockets",
+      "REST APIs"
     ],
-    "projects": [
-        {
-            "name": "CyberGuardAI",
-            "keywords": [
-                "cybersecurity",
-                "langgraph",
-                "llm",
-                "fraud",
-                "agentic",
-                "multi-agent"
-            ],
-            "description": "Agentic cybersecurity platform assisting victims of UPI fraud, identity theft, and ransomware.",
-            "tech_stack": [
-                "LangGraph",
-                "LLMs",
-                "Multi-Agent Systems"
-            ],
-            "details": {
-                "problem": "Complex forensics and recovery for cybercrime victims.",
-                "solution": "Multi-agent workflow orchestrating web search and reasoning tools.",
-                "architecture": "Multi-agent pipeline",
-                "algorithms": "Agentic RAG, Source-grounded reasoning",
-                "metrics": "Citation validation to reduce hallucination risk"
-            }
-        },
-        {
-            "name": "RAGOps",
-            "keywords": [
-                "rag",
-                "enterprise",
-                "llm",
-                "fastapi",
-                "rbac"
-            ],
-            "description": "Enterprise-grade RAG platform with project-level knowledge isolation and RBAC.",
-            "tech_stack": [
-                "Next.js",
-                "FastAPI",
-                "LangChain",
-                "PostgreSQL"
-            ],
-            "details": {
-                "problem": "Data leakage across domain knowledge bases.",
-                "solution": "Project-level knowledge isolation and explainable AI chat with chunk-level citations.",
-                "architecture": "Multi-model orchestration",
-                "algorithms": "Gemini 1.5, Groq LLaMA 3, HuggingFace embeddings",
-                "metrics": "Optimized latency, cost, and quality"
-            }
-        },
-        {
-            "name": "TribeBharat",
-            "keywords": [
-                "ecommerce",
-                "django",
-                "react",
-                "razorpay"
-            ],
-            "description": "Production E-commerce Platform with OTP/JWT authentication and Razorpay integration.",
-            "tech_stack": [
-                "Django",
-                "React",
-                "PostgreSQL",
-                "Razorpay"
-            ],
-            "details": {
-                "problem": "Need for scalable marketplace with admin dashboard workflows.",
-                "solution": "Contributed to feature integration and production stability. Deployed on AWS EC2 with Nginx.",
-                "architecture": "Django MVC, Nginx reverse proxy",
-                "algorithms": "OTP Validation, JWT Hash",
-                "metrics": "Scalable production hosting with optimized server configuration"
-            }
-        },
-        {
-            "name": "Cvision",
-            "keywords": [
-                "cvision",
-                "cataract",
-                "eye",
-                "medical",
-                "mobile",
-                "flutter",
-                "offline"
-            ],
-            "description": "Published peer-reviewed research proposing a CNN-based cataract detection system.",
-            "tech_stack": [
-                "MobileNetV2",
-                "VGG19",
-                "DenseNet121",
-                "TensorFlow Lite",
-                "Flutter"
-            ],
-            "details": {
-                "problem": "Lack of accessible eye-care.",
-                "solution": "Quantized CNN pipeline optimized for smartphone and edge deployment.",
-                "architecture": "MobileNetV2 (Quantized) -> TFLite.",
-                "algorithms": "MobileNetV2, VGG19",
-                "metrics": "95%+ accuracy, evaluated with ROC/AUC"
-            }
-        }
+    "frontend": [
+      "Next.js 15 (App Router)",
+      "React 19",
+      "TypeScript",
+      "TailwindCSS",
+      "Framer Motion",
+      "React Flow",
+      "Recharts",
+      "Plotly",
+      "shadcn/ui"
     ],
-    "contact": {
-        "email": "amritanshuyadav@example.com",
-        "github": "github.com/TechNxt05",
-        "linkedin": "linkedin.com/in/amritanshu"
-    },
-    "experience": [
-        {
-            "title": "DRDO - Research Intern",
-            "period": "Jan 2026 - Present",
-            "description": "Designed and developed a native multithreaded Win32 application for real-time avionics bus telemetry monitoring. Built a synchronized data acquisition pipeline."
-        },
-        {
-            "title": "XelronAI - Software Development Engineer Intern",
-            "period": "Jan 2026 - Mar 2026",
-            "description": "Engineered evaluation pipelines for LLM-generated code. Built Docker-based benchmarking environments."
-        }
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma ORM",
+      "SQLAlchemy",
+      "NoSQL",
+      "SQLite",
+      "Redis"
+    ],
+    "devops_cloud": [
+      "Docker",
+      "Docker Compose",
+      "AWS EC2",
+      "Nginx (Reverse Proxy)",
+      "CI/CD (GitHub Actions)",
+      "Vercel",
+      "Render",
+      "Neon DB"
+    ],
+    "systems": [
+      "Win32 API",
+      "Multithreading (C++)",
+      "Structured Concurrency",
+      "Avionics Telemetry",
+      "Real-time Data Streams"
     ]
+  },
+  "education": [
+    {
+      "degree": "B.Tech in Electronics & Communication Engineering",
+      "institution": "International Institute of Information Technology, Naya Raipur",
+      "year": "2022 – 2026",
+      "focus": [
+        "Distributed Systems & Telemetry",
+        "Data Structures & Algorithms",
+        "Database Management Systems",
+        "Machine Learning Systems",
+        "System Architecture & Design"
+      ]
+    },
+    {
+      "degree": "Class XII (ISC)",
+      "institution": "City Montessori School, Lucknow",
+      "year": "2021",
+      "focus": [
+        "95.8% Aggregate Score",
+        "Advanced Mathematics and Physics Focus"
+      ]
+    },
+    {
+      "degree": "Class X (ICSE)",
+      "institution": "City Montessori School, Lucknow",
+      "year": "2019",
+      "focus": [
+        "93% Aggregate Score"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "DRDO (Defense Research & Development Organization)",
+      "role": "Research Intern",
+      "period": "Jan 2026 – Present",
+      "highlights": [
+        "Architected a native, multithreaded Win32 telemetry application in C++ to process real-time avionics bus communications.",
+        "Built high-throughput structured concurrency loops with deterministic execution parameters and zero memory leaks.",
+        "Designed an offline telemetry simulation engine for dry-runs and automated signal validation pipelines."
+      ],
+      "tech_stack": [
+        "C++",
+        "Win32 API",
+        "Multithreading",
+        "Systems Engineering"
+      ]
+    },
+    {
+      "company": "XelronAI",
+      "role": "Software Development Engineer Intern",
+      "period": "Jan 2026 – Mar 2026",
+      "highlights": [
+        "Engineered scalable LLM evaluation pipelines capable of performing PR-level reasoning audits.",
+        "Established a deterministic failure taxonomy database to classify semantic errors, prompt leakages, and hallucinated functions.",
+        "Containerized parallel benchmarking nodes using Docker and pytest to execute isolated evaluations across 20+ models."
+      ],
+      "tech_stack": [
+        "Python",
+        "Docker",
+        "pytest",
+        "CI/CD",
+        "LLM Evaluation"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Machine Learning Assisted Design and Performance Modeling of a Tunable Microfluidic SIW Self-Diplexing Antenna",
+      "journal": "IEEE ICAIIC 2026",
+      "location": "Tokyo, Japan",
+      "description": "Utilized neural modeling to optimize RF parameters for high-frequency tunable microfluidic antennas.",
+      "tags": [
+        "Machine Learning",
+        "Antenna Design",
+        "IEEE Research"
+      ]
+    },
+    {
+      "title": "Cvision: A Deep Learning Framework for Cataract Detection using Smartphone",
+      "journal": "IEEE CCNCPS 2025",
+      "location": "Dubai, UAE",
+      "description": "Proposing a quantized MobileNetV2 pipeline optimized for lightweight edge smartphone processing with 95%+ accuracy.",
+      "tags": [
+        "Deep Learning",
+        "Computer Vision",
+        "Healthcare"
+      ]
+    },
+    {
+      "title": "Machine Learning–Assisted Power Optimization of PMOS-Biased Sense Amplifiers at 180 nm",
+      "journal": "CPEEE 2026",
+      "location": "Japan",
+      "description": "Developed regression-guided parametric search routines to achieve sub-nanosecond amplifier performance thresholds.",
+      "tags": [
+        "Silicon Optimization",
+        "Regression Modeling",
+        "CPEEE"
+      ]
+    }
+  ],
+  "flagship_projects": [
+    {
+      "name": "AuditAI",
+      "title": "AI Reliability & Observability Platform",
+      "tagline": "Datadog for LLM Agents",
+      "description": "A production-grade SaaS platform providing comprehensive observability, automated evaluation, and adversarial stress-testing for LLM systems, RAG apps, and multi-agent workflows.",
+      "metrics": {
+        "evaluation": "5-Point Deterministic Engine",
+        "hallucination": "Sentence-level TF-IDF similarity",
+        "safety": "Zero-LLM latency safety scoring",
+        "database": "Multi-tenant PostgreSQL + pgvector"
+      },
+      "highlights": [
+        "Deterministic scoring engine evaluating hallucination, faithfulness, prompt injection risk, tool abuse, and compliance.",
+        "Integrated adversarial test suite running context poisoning, prompt injections, and PII stress simulations.",
+        "Multi-tenant framework with robust FastAPI backend, Next.js 14 dashboard, and integrated Python SDK."
+      ],
+      "tech_stack": [
+        "FastAPI",
+        "Next.js",
+        "PostgreSQL",
+        "pgvector",
+        "Docker",
+        "TF-IDF"
+      ],
+      "links": {
+        "github": "https://github.com/TechNxt05/AuditAI",
+        "live": "https://audit-ai-eosin.vercel.app/"
+      }
+    },
+    {
+      "name": "Aegis-Agent",
+      "title": "Runtime Safety Middleware for AI Agents",
+      "tagline": "The Zero-Trust Firewall for LLM Workflows",
+      "description": "An npm package providing runtime safety, risk scoring, jailbreak checking, and citation-validation middleware for LLM applications.",
+      "metrics": {
+        "risk_scoring": "Weighted Category Risk Score",
+        "pass_rate": "Configurable maximum risk limits",
+        "latency": "Minimal overhead, zero-cost deterministic filters"
+      },
+      "highlights": [
+        "Wraps arbitrary async agent nodes and intercepts inputs/outputs to detect prompt injections and ungrounded statements.",
+        "Configurable policy enforcement modes: block, warn, and rewrite.",
+        "Built-in evaluation utility summarizing safetyPassRate, groundingFailureRate, and injectionVulnerabilityRate."
+      ],
+      "tech_stack": [
+        "TypeScript",
+        "npm",
+        "CI/CD (GitHub Actions)",
+        "Changesets"
+      ],
+      "links": {
+        "github": "https://github.com/TechNxt05/Aegis-Agent",
+        "npm": "https://www.npmjs.com/package/aegis-agent"
+      }
+    },
+    {
+      "name": "CyberGuardAI",
+      "title": "AI-Native Cyber Investigation Platform",
+      "tagline": "7-Agent LangGraph Threat Swarm",
+      "description": "An agentic investigation platform orchestrating multimodal analysis and React Flow graphs to assist victims of digital fraud.",
+      "metrics": {
+        "agents": "7-Agent Collaborative Graph",
+        "flow": "Real-time attack path mapping",
+        "vision": "Gemini Vision OCR extraction"
+      },
+      "highlights": [
+        "Orchestrates a 7-agent swarm with specialized nodes (ingestion, planner, researcher, evidence parser, reporter).",
+        "Generates interactive React Flow graph visualization of attacks, mapping evidence nodes to threat models.",
+        "Real-time update streams managed using WebSockets and backed by a flexible MongoDB schema."
+      ],
+      "tech_stack": [
+        "LangGraph",
+        "Gemini Vision",
+        "FastAPI",
+        "MongoDB",
+        "WebSockets",
+        "React Flow"
+      ],
+      "links": {
+        "github": "https://github.com/TechNxt05/CyberGuard",
+        "live": "https://cyber-guard-liard.vercel.app/"
+      }
+    },
+    {
+      "name": "RAGOps",
+      "title": "Enterprise RAG Platform",
+      "tagline": "Project-Scoped Isolated Retrieval Engine",
+      "description": "An enterprise-grade document intelligence platform featuring RBAC, multi-model support, and isolated workspace embeddings.",
+      "metrics": {
+        "latency": "Sub-200ms document chunking",
+        "citations": "Sentence-grounded retrieval source validation",
+        "security": "Workspace isolation via pgvector and FAISS"
+      },
+      "highlights": [
+        "Enforces database-level tenant isolation, ensuring zero leakages across distinct project knowledge bases.",
+        "Renders precise chunk citations mapping response claims back to raw pdf snippets.",
+        "Includes a retrieval inspector console for debugging vector similarity distances."
+      ],
+      "tech_stack": [
+        "LangChain",
+        "FastAPI",
+        "PostgreSQL",
+        "FAISS",
+        "Next.js"
+      ],
+      "links": {
+        "github": "https://github.com/TechNxt05/RAGOps",
+        "live": "https://ragops.vercel.app/"
+      }
+    },
+    {
+      "name": "DataPilot",
+      "title": "Autonomous Data Science Mission Control",
+      "tagline": "Self-Healing Data Exploration Loop",
+      "description": "A premium, autonomous data workspace utilizing a Planner/Executor/Critic agent loop to write, run, and self-heal Python code on raw datasets.",
+      "metrics": {
+        "loops": "Automatic code reflection & self-healing",
+        "graphics": "Holo-theme interactive Plotly charts",
+        "discovery": "One-click 'Magic Wand' anomaly detection"
+      },
+      "highlights": [
+        "Maintains a self-healing runner: parses console trace errors and invokes a Critic agent to generate patches.",
+        "Streams cognitive states (Planning, Executing, Success, Failure) onto an animated Neural Core visualization.",
+        "Exposes real-time thought-streams revealing prompt reasoning steps as the script executes."
+      ],
+      "tech_stack": [
+        "FastAPI",
+        "Pandas",
+        "Scikit-Learn",
+        "Plotly",
+        "LangGraph",
+        "Next.js"
+      ],
+      "links": {
+        "live": "https://data-pilot-one.vercel.app/"
+      }
+    }
+  ],
+  "secondary_projects": [
+    {
+      "name": "TemporalAI",
+      "title": "Autonomous Forecasting & Intelligence Platform",
+      "description": "A production-grade agentic system orchestrating specialized forecasting agents (DataAgent, FeatureAgent, ModelAgent, SelectorAgent, InsightAgent) to execute ARIMA, Prophet, XGBoost, and PyTorch LSTM models competitively.",
+      "tech_stack": ["FastAPI", "Next.js", "Recharts", "SQLAlchemy", "PyTorch"],
+      "links": {
+        "github": "https://github.com/TechNxt05/TemporalAI",
+        "live": "https://temporal-ai-six.vercel.app/"
+      }
+    },
+    {
+      "name": "LeadFlow",
+      "title": "Single-Screen Enterprise CRM MVP",
+      "description": "A production CRM with status badges, search debouncing, and optimistic TanStack query updates. Includes a reverse-chronological discussion timeline and full Docker Compose deployment setups.",
+      "tech_stack": ["Next.js", "React 19", "Prisma ORM", "PostgreSQL", "Docker"],
+      "links": {
+        "github": "https://github.com/TechNxt05/Lead-Flow",
+        "live": "https://lead-flow1.vercel.app/"
+      }
+    },
+    {
+      "name": "Mumzworld AI",
+      "title": "Bilingual E-commerce Stroller Advisor",
+      "description": "Dual-feature platform combining Compare AI (spec normalization, citations) and a bilingual AI Shopping Assistant with voice search and a live LLM-as-judge evaluation dashboard.",
+      "tech_stack": ["Next.js 15", "FastAPI", "Gemini Pro", "OpenRouter"],
+      "links": {
+        "live": "https://mumz-world-ai.vercel.app/"
+      }
+    },
+    {
+      "name": "GlobbleCube ETA Challenge",
+      "title": "Smoothed Hierarchical ETA Predictor",
+      "description": "A customized hierarchical duration lookup model resolving sparse zones for taxi trip predictions, beating standard baseline trees with hyper-fast CPU inference.",
+      "tech_stack": ["Python", "Pandas", "Scikit-Learn", "Docker"],
+      "links": {
+        "github": "https://github.com/TechNxt05/GlobbleCube-ETA-Submission"
+      }
+    }
+  ],
+  "achievements": [
+    {
+      "title": "IEEE Publications",
+      "description": "3 peer-reviewed publications spanning RF Modeling (ICAIIC Tokyo), Medical Deep Learning (Dubai), and Sense Amplifier Optimization."
+    },
+    {
+      "title": "Smart India Hackathon Lead",
+      "description": "Led team to build the AYUSH digital portal, reducing paperwork processes by 50% through automated forms and validation."
+    },
+    {
+      "title": "aegis-agent Release",
+      "description": "Authored and published an open-source zero-trust agentic security package on npm, securing dozens of downloads."
+    },
+    {
+      "title": "Startup-Grade Deployments",
+      "description": "Successfully designed and deployed 3+ production platforms (AuditAI, CyberGuardAI, Mumzworld AI) carrying out live evaluations."
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Strategic Systems",
+      "details": "Chess.com Rapid ~1450+ (Top 10% globally). Cultivates tactical foresight, complex branch pruning, and system-level pattern detection."
+    },
+    {
+      "name": "Pressure Operations",
+      "details": "Active cricket builder. Inspired by MS Dhoni's structured execution methods: maintaining high reliability under production-grade pressure."
+    }
+  ],
+  "contact": {
+    "email": "amritanshuy0503@gmail.com",
+    "phone": "+91-7755070760",
+    "github": "https://github.com/TechNxt05",
+    "linkedin": "https://www.linkedin.com/in/amritanshu-yadav-6480662a8/",
+    "google_scholar": "https://scholar.google.com/citations?user=ZPF9seYAAAAJ&hl=en",
+    "portfolio": "https://portfolio-six-orcin-80f1sxykyy.vercel.app/"
+  }
 }

@@ -78,31 +78,53 @@ export function ChatInterface() {
     const generateResponse = (query: string): string => {
         const lowerQuery = query.toLowerCase();
 
-        // 1. Check Projects (Exact Match first for context injection)
-        const matchedProject = knowledgeBase.projects.find(p =>
+        // 1. Combine flagship and secondary projects for comprehensive query matching
+        const allProjects = [
+            ...knowledgeBase.flagship_projects.map(p => ({
+                name: p.name,
+                title: p.title,
+                tagline: p.tagline,
+                description: p.description,
+                metrics: Object.entries(p.metrics).map(([k, v]) => `${k}: ${v}`).join(", "),
+                highlights: p.highlights,
+                tech_stack: p.tech_stack,
+                keywords: [p.name.toLowerCase(), p.title.toLowerCase(), p.tagline.toLowerCase()]
+            })),
+            ...knowledgeBase.secondary_projects.map(p => ({
+                name: p.name,
+                title: p.title,
+                tagline: "",
+                description: p.description,
+                metrics: "",
+                highlights: [] as string[],
+                tech_stack: p.tech_stack,
+                keywords: [p.name.toLowerCase(), p.title.toLowerCase()]
+            }))
+        ];
+
+        const matchedProject = allProjects.find(p =>
             lowerQuery.includes(p.name.toLowerCase()) ||
             p.keywords.some(k => lowerQuery.includes(k))
         );
 
         if (matchedProject) {
-            // Enhanced technical response based on implementation details
-            if (matchedProject.details) {
-                return `**${matchedProject.name}**\n\n` +
-                    `**🚀 Solution:** ${matchedProject.details.solution}\n\n` +
-                    `**🏗️ Architecture:** ${matchedProject.details.architecture}\n\n` +
-                    `**🔢 Key Metrics:** ${matchedProject.details.metrics}`;
-            }
-            return matchedProject.description;
+            return `**${matchedProject.name}** - ${matchedProject.title}\n\n` +
+                `**🚀 Solution:** ${matchedProject.description}\n\n` +
+                (matchedProject.metrics ? `**🔢 Key Metrics:** ${matchedProject.metrics}\n\n` : "") +
+                `**🛠️ Tech Stack:** ${matchedProject.tech_stack.join(", ")}` +
+                (matchedProject.highlights.length > 0 ? `\n\n**Key Highlights:**\n- ${matchedProject.highlights.join("\n- ")}` : "");
         }
 
         // 2. Check Skills
         if (lowerQuery.includes("skill") || lowerQuery.includes("tech") || lowerQuery.includes("stack")) {
             const skills = knowledgeBase.technical_skills;
             return `**Technical Expertise:**\n\n` +
-                `**🧠 AI/ML:** ${skills.ai_ml.join(", ")}\n` +
-                `**🛠️ Frameworks:** ${skills.frameworks.join(", ")}\n` +
-                `**💻 Languages:** ${skills.languages.join(", ")}\n` +
-                `**🌩️ Cloud/Ops:** ${skills.systems.join(", ")}`;
+                `**🧠 AI & Multi-Agent:** ${skills.ai_ml.join(", ")}\n\n` +
+                `**⚙️ Core Backend:** ${skills.backend.join(", ")}\n\n` +
+                `**💻 Modern UI:** ${skills.frontend.join(", ")}\n\n` +
+                `**🗄️ Databases & ORMs:** ${skills.databases.join(", ")}\n\n` +
+                `**🐳 DevOps & Cloud:** ${skills.devops_cloud.join(", ")}\n\n` +
+                `**⚡ Systems Concurrency:** ${skills.systems.join(", ")}`;
         }
 
         // 3. Check Achievements / Hackathons
@@ -119,8 +141,7 @@ export function ChatInterface() {
         // 5. Check Hobbies (Cricket/Chess)
         if (lowerQuery.includes("hobby") || lowerQuery.includes("hobbies") || lowerQuery.includes("interest") || lowerQuery.includes("cricket") || lowerQuery.includes("chess")) {
             return `**Hobbies & Personality:**\n\n` +
-                knowledgeBase.hobbies.map(h => `**${h.name}:** ${h.details}`).join("\n\n") +
-                `\n\n*${knowledgeBase.system_role.tone}*`;
+                knowledgeBase.hobbies.map(h => `**${h.name}:** ${h.details}`).join("\n\n");
         }
 
         // 6. Check Bio / Intro
@@ -135,10 +156,10 @@ export function ChatInterface() {
 
         // 8. Check Contact
         if (lowerQuery.includes("contact") || lowerQuery.includes("email") || lowerQuery.includes("hire")) {
-            return `You can reach me at ${knowledgeBase.contact.email} or connect on LinkedIn.`;
+            return `You can reach me at ${knowledgeBase.contact.email} or connect on LinkedIn at ${knowledgeBase.contact.linkedin}.`;
         }
 
-        return "I can explain Amritanshu's engineering projects like Amazon RecSys, Store Ratings, or Cvision. I can also discuss his tech stack, achievements, or research. What would you like to know?";
+        return "I can explain Amritanshu's engineering projects like AuditAI, Aegis-Agent, CyberGuardAI, RAGOps, or DataPilot. I can also discuss his tech stack, publications, achievements, or experience. What would you like to know?";
     };
 
     return (

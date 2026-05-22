@@ -2,27 +2,45 @@
 
 import { Navbar } from "@/components/ui/navbar";
 import { Hero } from "@/components/home/hero";
-import { Footer } from "@/components/ui/footer";
-import { ChessHierarchy } from "@/components/projects/chess-hierarchy";
-import { TrophyWall } from "@/components/achievements/trophy-wall";
-import { MovieSkills } from "@/components/skills/movie-grid";
-import { EducationTimeline } from "@/components/education/timeline";
+import { LiveMetricsStrip } from "@/components/home/live-metrics";
+import { AboutPositioning } from "@/components/home/about-positioning";
+import { ExperienceTimeline } from "@/components/experience/timeline";
+import { FlagshipProjects } from "@/components/projects/flagship-projects";
+import { SystemsArchitecture } from "@/components/projects/systems-architecture";
+import { Publications } from "@/components/publications/publications";
+import { TechStack } from "@/components/skills/tech-stack";
+import { OpenSourcePackage } from "@/components/projects/open-source";
+import { ProjectTimeline } from "@/components/projects/timeline";
+import { Achievements } from "@/components/achievements/achievements";
 import { Contact } from "@/components/home/contact";
+import { Footer } from "@/components/ui/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background relative selection:bg-primary/20">
+    <main className="min-h-screen bg-background relative selection:bg-primary/20 overflow-x-hidden">
       <Navbar />
 
       <Hero />
 
-      <ChessHierarchy />
+      <LiveMetricsStrip />
 
-      <TrophyWall />
+      <AboutPositioning />
 
-      <MovieSkills />
+      <ExperienceTimeline />
 
-      <EducationTimeline />
+      <FlagshipProjects />
+
+      <SystemsArchitecture />
+
+      <Publications />
+
+      <TechStack />
+
+      <OpenSourcePackage />
+
+      <ProjectTimeline />
+
+      <Achievements />
 
       <Contact />
 
