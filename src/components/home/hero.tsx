@@ -202,11 +202,11 @@ export function Hero() {
     }, 150);
   };
 
-  // Automatic photo slideshow cycle effect (every 2 seconds)
+  // Automatic photo slideshow cycle effect (every 4 seconds)
   useEffect(() => {
     const interval = setInterval(() => {
       cyclePhoto();
-    }, 2000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
