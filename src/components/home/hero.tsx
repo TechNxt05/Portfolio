@@ -377,7 +377,7 @@ export function Hero() {
                 <img
                   src="/Me1.jpeg"
                   alt="Amritanshu Yadav"
-                  className="object-cover w-full h-full filter grayscale contrast-125 group-hover/img:grayscale-0 transition-all duration-700"
+                  className="object-contain w-full h-full transition-all duration-700"
                 />
                 
                 {/* HUD Coordinates / Status Overlay */}

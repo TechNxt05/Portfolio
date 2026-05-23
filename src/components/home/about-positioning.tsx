@@ -242,7 +242,7 @@ export function AboutPositioning() {
                   <img
                     src={photos[currentPhotoIdx].src}
                     alt={photos[currentPhotoIdx].role}
-                    className="object-cover w-full h-full filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                    className="object-contain w-full h-full transition-all duration-500"
                   />
                   {/* Neon screen grid overlay */}
                   <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15)_50%,rgba(255,255,255,0.05)_50%)] bg-[size:100%_4px] pointer-events-none mix-blend-overlay" />
