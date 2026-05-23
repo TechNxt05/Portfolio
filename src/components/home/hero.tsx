@@ -140,18 +140,18 @@ function CanvasNetwork() {
 
 const photos = [
   {
-    src: "/ME.jpeg",
-    label: "TARGET_NODE_01",
-    role: "Strategic Chess Planner",
-    desc: "Rapid ELO 1450+ (Top 10%). Translating strategic chess foresight, defensive threat analysis, and branches-pruning logic directly into multi-agent swarms.",
-    tag: "CHESS_TACTICS"
-  },
-  {
     src: "/Me1.jpeg",
     label: "TARGET_NODE_02",
     role: "Dhoni-Execution Mindset",
     desc: "Inspired by MS Dhoni's cool-headed leadership under intense pressure. Designing high-availability systems with deterministic, calm execution loops.",
     tag: "DHONI_FLOW"
+  },
+  {
+    src: "/ME.jpeg",
+    label: "TARGET_NODE_01",
+    role: "Strategic Chess Planner",
+    desc: "Rapid ELO 1450+ (Top 10%). Translating strategic chess foresight, defensive threat analysis, and branches-pruning logic directly into multi-agent swarms.",
+    tag: "CHESS_TACTICS"
   },
   {
     src: "/Me2.jpeg",
@@ -201,6 +201,14 @@ export function Hero() {
       setIsGlitching(false);
     }, 150);
   };
+
+  // Automatic photo slideshow cycle effect (every 2 seconds)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      cyclePhoto();
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   const openAgentInquiry = (topic: string) => {
     openWithContext(`Tell me about your ${topic} project in detail.`);
