@@ -141,10 +141,10 @@ function CanvasNetwork() {
 const mockLogs = [
   { text: "[AEGIS SHIELD] Active risk scoring engine initialized.", color: "text-cyan-400" },
   { text: "[AUDIT-AI] Cosine similarity: 0.9412 - Verified Grounded.", color: "text-emerald-400" },
-  { text: "[CYBERGUARD] Multi-agentLangGraph Swarm active (7 nodes).", color: "text-purple-400" },
-  { text: "[DATAPILOT] Core loop execution: STATE_PLANNING -> OK.", color: "text-yellow-400" },
+  { text: "[CHESS-STRATEGY] Calibrated Rapid Engine ELO: ~1450+.", color: "text-purple-400" },
+  { text: "[DHONI-PHILOSOPHY] Calming finisher execution loop initialized.", color: "text-yellow-400" },
   { text: "[RAG-OPS] isolated workspace FAISS indices synced successfully.", color: "text-cyan-400" },
-  { text: "[EVAL-ENGINE] Adversarial suite compiled: 0 anomalies.", color: "text-pink-400" },
+  { text: "[CRICKET-SIM] Vector launch angles optimized for strike rate.", color: "text-pink-400" },
   { text: "[DRDO-TELEMETRY] C++ Win32 Telemetry Loop synced. Lag: 0ms.", color: "text-emerald-400" },
   { text: "[SYSTEM] Production metrics output: 99.8% Safety Index.", color: "text-cyan-300" }
 ];
@@ -380,16 +380,16 @@ export function Hero() {
             >
               <div className="grid grid-cols-3 gap-2 font-mono text-[9px] text-gray-400 text-center">
                 <div className="bg-white/2 py-2 rounded border border-white/5">
-                  <span className="block text-cyan-400 font-bold text-xs">28ms</span>
-                  LATENCY
-                </div>
-                <div className="bg-white/2 py-2 rounded border border-white/5">
-                  <span className="block text-purple-400 font-bold text-xs">1450+</span>
+                  <span className="block text-cyan-400 font-bold text-xs">1450+</span>
                   CHESS ELO
                 </div>
                 <div className="bg-white/2 py-2 rounded border border-white/5">
-                  <span className="block text-emerald-400 font-bold text-xs">99.4%</span>
-                  ACCURACY
+                  <span className="block text-purple-400 font-bold text-xs">ALL-ROUND</span>
+                  CRICKET PHI
+                </div>
+                <div className="bg-white/2 py-2 rounded border border-white/5">
+                  <span className="block text-emerald-400 font-bold text-xs">99.8%</span>
+                  RELIABILITY
                 </div>
               </div>
             </div>

@@ -13,7 +13,8 @@ const publications = [
     location: "Tokyo, Japan",
     summary: "Leveraged deep neural network modeling to predict RF properties, drastically cutting down microfluidic waveguide SIW dipole antenna iteration simulations from hours to milliseconds.",
     researchArea: "Neural Parametric Optimization",
-    badgeColor: "bg-cyan-500/10 border-cyan-500/30 text-cyan-400"
+    badgeColor: "bg-cyan-500/10 border-cyan-500/30 text-cyan-400",
+    url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZPF9seYAAAAJ&citation_for_view=ZPF9seYAAAAJ:u5HHmVD_uO8C"
   },
   {
     title: "Cvision: A Deep Learning Framework for Cataract Detection using Smartphone",
@@ -21,7 +22,8 @@ const publications = [
     location: "Dubai, UAE",
     summary: "Architected a lightweight smartphone cataract screening pipeline. Quantized convolutional models (MobileNetV2, VGG19) to run offline at the edge with 95%+ ROC accuracy.",
     researchArea: "Lightweight Edge Medical AI",
-    badgeColor: "bg-purple-500/10 border-purple-500/30 text-purple-400"
+    badgeColor: "bg-purple-500/10 border-purple-500/30 text-purple-400",
+    url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZPF9seYAAAAJ&citation_for_view=ZPF9seYAAAAJ:u-x6o8ySG0sC"
   },
   {
     title: "Machine Learning–Assisted Power Optimization of PMOS-Biased Sense Amplifiers at 180 nm",
@@ -29,7 +31,8 @@ const publications = [
     location: "Japan",
     summary: "Engineered high-accuracy regression models to conduct multi-dimensional parametric optimization on sense amplifier layouts, optimizing sub-nanosecond delay constraints.",
     researchArea: "Regression Parametric Search",
-    badgeColor: "bg-emerald-500/10 border-emerald-500/30 text-emerald-400"
+    badgeColor: "bg-emerald-500/10 border-emerald-500/30 text-emerald-400",
+    url: "https://scholar.google.com/citations?user=ZPF9seYAAAAJ&hl=en"
   }
 ];
 
@@ -100,7 +103,7 @@ export function Publications() {
                   </span>
                   
                   <Button asChild variant="ghost" size="sm" className="text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 font-mono text-[11px] p-0 h-auto">
-                    <a href="https://scholar.google.com/citations?user=ZPF9seYAAAAJ&hl=en" target="_blank" className="flex items-center gap-1">
+                    <a href={pub.url} target="_blank" className="flex items-center gap-1">
                       Paper Index <ExternalLink size={12} />
                     </a>
                   </Button>

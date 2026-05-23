@@ -307,7 +307,7 @@ System-Token: safe_attested_loop_ack
                       <div><span className="text-white">Active Internships:</span> 2 (DRDO, XelronAI)</div>
                       <div><span className="text-white">IEEE Conf. Papers:</span> 3 (Tokyo, Dubai, Japan)</div>
                       <div><span className="text-white">NPM Registry:</span> aegis-agent (Safety Layer)</div>
-                      <div><span className="text-white">System ELO:</span> 1450+ Chess rating</div>
+                      <div><span className="text-white">System ELO:</span> 1450+ Chess / Dhoni Execution (Cricket)</div>
                     </div>
                     <div className="space-y-1">
                       <div><span className="text-white">Availability:</span> Open to Opportunities</div>
