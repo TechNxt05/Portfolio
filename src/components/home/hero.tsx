@@ -360,12 +360,12 @@ export function Hero() {
               `}} />
 
               {/* PROFILE IMAGE: Me1.jpeg at the top */}
-              <div className="relative w-full h-[150px] rounded-lg overflow-hidden border border-white/10 bg-zinc-950/60 mb-3 flex items-center justify-center group/img shrink-0 shadow-inner">
+              <div className="relative w-full h-[220px] rounded-2xl overflow-hidden border border-cyan-500/20 bg-zinc-950/60 mb-4 flex items-center justify-center group/img shrink-0 shadow-[0_8px_32px_rgba(6,182,212,0.18)]">
                 {/* L-shaped HUD corners */}
-                <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
-                <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
-                <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
-                <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute top-3 left-3 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute top-3 right-3 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute bottom-3 left-3 w-3.5 h-3.5 border-b-2 border-l-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute bottom-3 right-3 w-3.5 h-3.5 border-b-2 border-r-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
 
                 {/* Laser Sweep Scanner */}
                 <div 
@@ -381,7 +381,7 @@ export function Hero() {
                 />
                 
                 {/* HUD Coordinates / Status Overlay */}
-                <div className="absolute bottom-2 right-2 bg-black/70 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono text-cyan-400 z-10 select-none">
+                <div className="absolute bottom-3 right-3 bg-black/70 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono text-cyan-400 z-10 select-none">
                   AVATAR: Me1.jpeg
                 </div>
               </div>
