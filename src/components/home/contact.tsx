@@ -312,7 +312,7 @@ System-Token: safe_attested_loop_ack
                     <div className="space-y-1">
                       <div><span className="text-white">Availability:</span> Open to Opportunities</div>
                       <div><span className="text-white">Timezone:</span> UTC+05:30 (India/Lucknow)</div>
-                      <div><span className="text-white">Safety Index:</span> 99.8% (Deterministic)</div>
+                      <div><span className="text-white">Academic Score:</span> 95.8% (ISC XII)</div>
                       <div><span className="text-white">Platform Stack:</span> Next.js 15, FastAPI, pgvector</div>
                     </div>
                   </div>

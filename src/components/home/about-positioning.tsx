@@ -6,14 +6,14 @@ import { Cpu, Shield, Layers, Users, Zap, Terminal } from "lucide-react";
 import { useRecruiterMode } from "@/context/recruiter-context";
 
 const mockLogs = [
-  { text: "[AEGIS SHIELD] Active risk scoring engine initialized.", color: "text-cyan-400" },
-  { text: "[AUDIT-AI] Cosine similarity: 0.9412 - Verified Grounded.", color: "text-emerald-400" },
-  { text: "[CHESS-STRATEGY] Calibrated Rapid Engine ELO: ~1450+.", color: "text-purple-400" },
-  { text: "[DHONI-PHILOSOPHY] Calming finisher execution loop initialized.", color: "text-yellow-400" },
-  { text: "[RAG-OPS] Isolated workspace FAISS indices synced successfully.", color: "text-cyan-400" },
-  { text: "[CRICKET-SIM] Vector launch angles optimized for strike rate.", color: "text-pink-400" },
+  { text: "[AEGIS-AGENT] Open-source middleware security filters active.", color: "text-cyan-400" },
+  { text: "[AUDIT-AI] Cosine similarity: sentence-level validation synced.", color: "text-emerald-400" },
+  { text: "[CHESS-STRATEGY] Chess ELO: 1450+ tree search optimization active.", color: "text-purple-400" },
+  { text: "[DHONI-PHILOSOPHY] Concurrency finisher loops calibrated.", color: "text-yellow-400" },
+  { text: "[RAG-OPS] Workspace isolated FAISS vector indices synced.", color: "text-cyan-400" },
+  { text: "[AYUSH-PORTAL] SIH aggregate forms verification calibrated.", color: "text-pink-400" },
   { text: "[DRDO-TELEMETRY] C++ Win32 Telemetry Loop synced. Lag: 0ms.", color: "text-emerald-400" },
-  { text: "[SYSTEM] Production metrics output: 99.8% Safety Index.", color: "text-cyan-300" }
+  { text: "[SYSTEM] All production pipelines verified and online.", color: "text-cyan-300" }
 ];
 
 export function AboutPositioning() {
@@ -250,7 +250,7 @@ export function AboutPositioning() {
             {/* Embedded Active Sub-Telemetry Status line */}
             <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 font-mono text-[9px] text-gray-600">
               <Terminal size={12} className="text-purple-400" />
-              <span>LIVE INTEGRITY MONITOR: 99.8% SAFETY INDEX &bull; NO DETECTIONS</span>
+              <span>LIVE INTEGRITY MONITOR: AEGIS-AGENT LAYER ACTIVE &bull; NO VIOLATIONS</span>
             </div>
           </motion.div>
 

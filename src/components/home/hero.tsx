@@ -406,7 +406,7 @@ export function Hero() {
                     <img
                       src={photos[currentPhotoIdx].src}
                       alt={photos[currentPhotoIdx].role}
-                      className="object-cover w-full h-full transition-all duration-700"
+                      className="object-contain w-full h-full transition-all duration-700"
                     />
                     
                     {/* HUD Coordinates / Status Overlay */}
@@ -458,12 +458,12 @@ export function Hero() {
                   CHESS ELO
                 </div>
                 <div className="bg-white/2 py-2 rounded border border-white/5">
-                  <span className="block text-purple-400 font-bold text-xs">ALL-ROUND</span>
-                  CRICKET PHI
+                  <span className="block text-purple-400 font-bold text-xs">3</span>
+                  IEEE PAPERS
                 </div>
                 <div className="bg-white/2 py-2 rounded border border-white/5">
-                  <span className="block text-emerald-400 font-bold text-xs">99.8%</span>
-                  RELIABILITY
+                  <span className="block text-emerald-400 font-bold text-xs">3+</span>
+                  DEPLOYMENTS
                 </div>
               </div>
             </div>
