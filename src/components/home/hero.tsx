@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Terminal as TermIcon, Shield, Layers, Users, Cpu, FileText, ArrowRight, Github, Linkedin, Calendar } from "lucide-react";
+import { ArrowDown, Terminal as TermIcon, Shield, Layers, Users, Cpu, FileText, ArrowRight, Github, Linkedin, Calendar, Target, RotateCw } from "lucide-react";
 import Link from "next/link";
 import { useRecruiterMode } from "@/context/recruiter-context";
 import { useChat } from "@/context/chat-context";
@@ -138,22 +138,35 @@ function CanvasNetwork() {
   return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />;
 }
 
-const mockLogs = [
-  { text: "[AEGIS SHIELD] Active risk scoring engine initialized.", color: "text-cyan-400" },
-  { text: "[AUDIT-AI] Cosine similarity: 0.9412 - Verified Grounded.", color: "text-emerald-400" },
-  { text: "[CHESS-STRATEGY] Calibrated Rapid Engine ELO: ~1450+.", color: "text-purple-400" },
-  { text: "[DHONI-PHILOSOPHY] Calming finisher execution loop initialized.", color: "text-yellow-400" },
-  { text: "[RAG-OPS] isolated workspace FAISS indices synced successfully.", color: "text-cyan-400" },
-  { text: "[CRICKET-SIM] Vector launch angles optimized for strike rate.", color: "text-pink-400" },
-  { text: "[DRDO-TELEMETRY] C++ Win32 Telemetry Loop synced. Lag: 0ms.", color: "text-emerald-400" },
-  { text: "[SYSTEM] Production metrics output: 99.8% Safety Index.", color: "text-cyan-300" }
+const photos = [
+  {
+    src: "/ME.jpeg",
+    label: "TARGET_NODE_01",
+    role: "Strategic Chess Planner",
+    desc: "Rapid ELO 1450+ (Top 10%). Translating strategic chess foresight, defensive threat analysis, and branches-pruning logic directly into multi-agent swarms.",
+    tag: "CHESS_TACTICS"
+  },
+  {
+    src: "/Me1.jpeg",
+    label: "TARGET_NODE_02",
+    role: "Dhoni-Execution Mindset",
+    desc: "Inspired by MS Dhoni's cool-headed leadership under intense pressure. Designing high-availability systems with deterministic, calm execution loops.",
+    tag: "DHONI_FLOW"
+  },
+  {
+    src: "/Me2.jpeg",
+    label: "TARGET_NODE_03",
+    role: "Core Systems Engineer",
+    desc: "Bridging Win32 telemetry loops, concurrent database design, and real-time processing streams with low latency.",
+    tag: "SYSTEMS_CORE"
+  }
 ];
 
 export function Hero() {
   const { isRecruiterMode, toggleRecruiterMode } = useRecruiterMode();
   const { openWithContext } = useChat();
-  const [logIndex, setLogIndex] = useState(0);
-  const [activeLogs, setActiveLogs] = useState<typeof mockLogs>([]);
+  const [currentPhotoIdx, setCurrentPhotoIdx] = useState(0);
+  const [isGlitching, setIsGlitching] = useState(false);
 
   // Mouse coordinate tracking for 3D parallax dashboard
   const dashRef = useRef<HTMLDivElement>(null);
@@ -181,22 +194,13 @@ export function Hero() {
     dashY.set(0);
   };
 
-  // Telemetry log stream effect
-  useEffect(() => {
-    setActiveLogs(mockLogs.slice(0, 3));
-    const interval = setInterval(() => {
-      setLogIndex((prev) => {
-        const next = (prev + 1) % mockLogs.length;
-        setActiveLogs((logs) => {
-          const updated = [...logs.slice(1), mockLogs[next]];
-          return updated;
-          return updated;
-        });
-        return next;
-      });
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
+  const cyclePhoto = () => {
+    setIsGlitching(true);
+    setTimeout(() => {
+      setCurrentPhotoIdx((prev) => (prev + 1) % photos.length);
+      setIsGlitching(false);
+    }, 150);
+  };
 
   const openAgentInquiry = (topic: string) => {
     openWithContext(`Tell me about your ${topic} project in detail.`);
@@ -333,10 +337,11 @@ export function Hero() {
             {/* LAYER 2: The Core Console Terminal Panel (middle layer, rich glassmorphism) */}
             <div 
               style={{ transform: "translateZ(10px)", transformStyle: "preserve-3d" }}
-              className="absolute inset-4 rounded-2xl bg-black/75 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col p-5 overflow-hidden shadow-cyan-glow/5"
+              className="absolute inset-4 rounded-2xl bg-black/75 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col p-5 overflow-hidden shadow-cyan-glow/5 select-none cursor-pointer group"
+              onClick={cyclePhoto}
             >
               {/* Terminal bar */}
-              <div className="flex items-center justify-between border-b border-white/5 pb-2 mb-3 font-mono text-[10px] text-gray-500">
+              <div className="flex items-center justify-between border-b border-white/5 pb-2 mb-2.5 font-mono text-[10px] text-gray-500">
                 <div className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-red-500/70" />
                   <span className="w-2 h-2 rounded-full bg-yellow-500/70" />
@@ -346,6 +351,18 @@ export function Hero() {
                 <div className="flex items-center gap-2 text-cyan-400">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                   <span>3D_ACTIVE</span>
+                </div>
+              </div>
+
+              {/* Title / Node Readout */}
+              <div className="w-full flex items-center justify-between font-mono text-[9px] text-gray-500 border-b border-white/5 pb-2 mb-2.5 shrink-0">
+                <div className="flex items-center gap-1">
+                  <Target size={10} className="text-cyan-400 animate-pulse" />
+                  <span>{photos[currentPhotoIdx].label}</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-cyan-400 bg-cyan-500/5 px-2 py-0.5 rounded border border-cyan-500/10">
+                  <span className="w-1 h-1 rounded-full bg-cyan-400 animate-pulse" />
+                  <span>{photos[currentPhotoIdx].tag}</span>
                 </div>
               </div>
 
@@ -359,8 +376,8 @@ export function Hero() {
                 }
               `}} />
 
-              {/* PROFILE IMAGE: Me1.jpeg at the top */}
-              <div className="relative w-full h-[300px] rounded-2xl overflow-hidden border border-cyan-500/20 bg-zinc-950/60 mb-4 flex items-center justify-center group/img shrink-0 shadow-[0_8px_32px_rgba(6,182,212,0.18)]">
+              {/* PROFILE IMAGE SLIDESHOW: cycles on click */}
+              <div className="relative w-full flex-1 min-h-[200px] rounded-2xl overflow-hidden border border-cyan-500/20 bg-zinc-950/60 mb-3 flex items-center justify-center shadow-[0_8px_32px_rgba(6,182,212,0.18)] group-hover:border-cyan-500/35 transition-colors">
                 {/* L-shaped HUD corners */}
                 <div className="absolute top-3 left-3 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
                 <div className="absolute top-3 right-3 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
@@ -373,40 +390,60 @@ export function Hero() {
                   style={{ animation: "scan-beam-hero 4s linear infinite" }}
                 />
                 
-                {/* Image */}
-                <img
-                  src="/Me1.jpeg"
-                  alt="Amritanshu Yadav"
-                  className="object-cover w-full h-full transition-all duration-700"
-                />
-                
-                {/* HUD Coordinates / Status Overlay */}
-                <div className="absolute bottom-3 right-3 bg-black/70 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono text-cyan-400 z-10 select-none">
-                  AVATAR: Me1.jpeg
-                </div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentPhotoIdx}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ 
+                      opacity: 1, 
+                      scale: 1,
+                      filter: isGlitching ? "blur(3px) brightness(1.8)" : "blur(0px) brightness(1)"
+                    }}
+                    exit={{ opacity: 0, scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                    className="w-full h-full relative"
+                  >
+                    <img
+                      src={photos[currentPhotoIdx].src}
+                      alt={photos[currentPhotoIdx].role}
+                      className="object-cover w-full h-full transition-all duration-700"
+                    />
+                    
+                    {/* HUD Coordinates / Status Overlay */}
+                    <div className="absolute bottom-3 right-3 bg-black/70 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono text-cyan-400 z-10">
+                      AVATAR: {photos[currentPhotoIdx].src.replace("/", "")}
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
-              {/* Simulated Live Console logs - appearing below the image */}
-              <div className="flex-1 flex flex-col justify-end font-mono text-[10px] space-y-1.5 text-left select-none scrollbar-cyber overflow-y-auto pr-1">
-                <div className="text-gray-600 mb-1 border-b border-white/5 pb-1 text-[8px]">
-                  * SYSTEM LOG STREAM - BELOW AVATAR FEED *
+              {/* Telemetry caption details */}
+              <div className="w-full text-left font-mono space-y-1 bg-black/40 border border-white/5 rounded-lg p-2.5 shrink-0">
+                <div className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider flex items-center justify-between">
+                  <span>{photos[currentPhotoIdx].role}</span>
+                  <span className="text-[8px] text-gray-500 font-normal">DECRYPTED_NODE</span>
                 </div>
-                
-                <AnimatePresence initial={false}>
-                  {activeLogs.map((log, idx) => (
-                    <motion.div
-                      key={log.text + idx}
-                      initial={{ opacity: 0, x: -10, y: 5 }}
-                      animate={{ opacity: 1, x: 0, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.95, y: -5 }}
-                      transition={{ duration: 0.3 }}
-                      className={`flex items-start gap-1.5 leading-normal ${log.color}`}
-                    >
-                      <span className="text-gray-600 select-none">&gt;</span>
-                      <span>{log.text}</span>
-                    </motion.div>
+                <p className="text-[9px] text-gray-400 leading-normal font-sans">
+                  {photos[currentPhotoIdx].desc}
+                </p>
+              </div>
+
+              {/* Slideshow dot indicators & interactive cycle prompt at bottom */}
+              <div className="w-full flex items-center justify-between pt-2 mt-2 border-t border-white/5 text-gray-600 font-mono text-[8px] shrink-0">
+                <div className="flex items-center gap-1.5">
+                  {photos.map((_, idx) => (
+                    <span
+                      key={idx}
+                      className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                        idx === currentPhotoIdx ? "bg-cyan-400 shadow-[0_0_6px_rgba(6,182,212,0.8)] w-3" : "bg-white/20"
+                      }`}
+                    />
                   ))}
-                </AnimatePresence>
+                </div>
+                <div className="flex items-center gap-1 animate-pulse hover:text-cyan-400 transition-colors">
+                  <RotateCw size={8} className="animate-spin-slow" />
+                  <span>Click card to cycle target streams</span>
+                </div>
               </div>
             </div>
 
