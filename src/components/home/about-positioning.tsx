@@ -225,7 +225,7 @@ export function AboutPositioning() {
             </div>
 
             {/* Image Container frame */}
-            <div className="relative w-full aspect-square max-h-[160px] rounded-lg overflow-hidden border border-white/10 bg-zinc-950 flex items-center justify-center shadow-inner group-hover:border-cyan-500/30 transition-all duration-300">
+            <div className="relative w-full h-[280px] rounded-lg overflow-hidden border border-white/10 bg-zinc-950 flex items-center justify-center shadow-inner group-hover:border-cyan-500/30 transition-all duration-300">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentPhotoIdx}
@@ -242,7 +242,7 @@ export function AboutPositioning() {
                   <img
                     src={photos[currentPhotoIdx].src}
                     alt={photos[currentPhotoIdx].role}
-                    className="object-contain w-full h-full transition-all duration-500"
+                    className="object-cover w-full h-full transition-all duration-500"
                   />
                   {/* Neon screen grid overlay */}
                   <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.15)_50%,rgba(255,255,255,0.05)_50%)] bg-[size:100%_4px] pointer-events-none mix-blend-overlay" />

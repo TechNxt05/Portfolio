@@ -311,7 +311,7 @@ export function Hero() {
           onMouseMove={handleDashMouseMove}
           onMouseLeave={handleDashMouseLeave}
           style={{ perspective: "1000px" }}
-          className="lg:col-span-5 relative w-full aspect-square max-w-[480px] lg:max-w-none mx-auto cursor-default pointer-events-auto"
+          className="lg:col-span-5 relative w-full h-[540px] max-w-[480px] lg:max-w-none mx-auto cursor-default pointer-events-auto"
         >
           {/* Main 3D Card Stack Container */}
           <motion.div
@@ -360,7 +360,7 @@ export function Hero() {
               `}} />
 
               {/* PROFILE IMAGE: Me1.jpeg at the top */}
-              <div className="relative w-full h-[220px] rounded-2xl overflow-hidden border border-cyan-500/20 bg-zinc-950/60 mb-4 flex items-center justify-center group/img shrink-0 shadow-[0_8px_32px_rgba(6,182,212,0.18)]">
+              <div className="relative w-full h-[300px] rounded-2xl overflow-hidden border border-cyan-500/20 bg-zinc-950/60 mb-4 flex items-center justify-center group/img shrink-0 shadow-[0_8px_32px_rgba(6,182,212,0.18)]">
                 {/* L-shaped HUD corners */}
                 <div className="absolute top-3 left-3 w-3.5 h-3.5 border-t-2 border-l-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
                 <div className="absolute top-3 right-3 w-3.5 h-3.5 border-t-2 border-r-2 border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
@@ -377,7 +377,7 @@ export function Hero() {
                 <img
                   src="/Me1.jpeg"
                   alt="Amritanshu Yadav"
-                  className="object-contain w-full h-full transition-all duration-700"
+                  className="object-cover w-full h-full transition-all duration-700"
                 />
                 
                 {/* HUD Coordinates / Status Overlay */}
