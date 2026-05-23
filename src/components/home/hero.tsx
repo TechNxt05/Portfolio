@@ -332,7 +332,7 @@ export function Hero() {
 
             {/* LAYER 2: The Core Console Terminal Panel (middle layer, rich glassmorphism) */}
             <div 
-              style={{ transform: "translateZ(10px)" }}
+              style={{ transform: "translateZ(10px)", transformStyle: "preserve-3d" }}
               className="absolute inset-4 rounded-2xl bg-black/75 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col p-5 overflow-hidden shadow-cyan-glow/5"
             >
               {/* Terminal bar */}
@@ -349,10 +349,47 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Simulated Live Console logs */}
-              <div className="flex-1 flex flex-col justify-end font-mono text-xs space-y-2.5 text-left select-none scrollbar-cyber overflow-y-auto pr-1">
-                <div className="text-gray-600 mb-1 border-b border-white/5 pb-1 text-[10px]">
-                  * SYSTEM PIPELINE TELEMETRY FEED v3.12 *
+              {/* Dynamic scan keyframes for Avatar inside console */}
+              <style dangerouslySetInnerHTML={{__html: `
+                @keyframes scan-beam-hero {
+                  0% { top: 0%; opacity: 0; }
+                  10% { opacity: 1; }
+                  90% { opacity: 1; }
+                  100% { top: 100%; opacity: 0; }
+                }
+              `}} />
+
+              {/* PROFILE IMAGE: Me1.jpeg at the top */}
+              <div className="relative w-full h-[150px] rounded-lg overflow-hidden border border-white/10 bg-zinc-950/60 mb-3 flex items-center justify-center group/img shrink-0 shadow-inner">
+                {/* L-shaped HUD corners */}
+                <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+                <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-cyan-500/40 pointer-events-none group-hover/img:border-cyan-400 transition-colors" />
+
+                {/* Laser Sweep Scanner */}
+                <div 
+                  className="absolute top-0 inset-x-0 h-[1.5px] bg-cyan-400/40 shadow-[0_0_8px_rgba(6,182,212,0.6)] z-20 pointer-events-none"
+                  style={{ animation: "scan-beam-hero 4s linear infinite" }}
+                />
+                
+                {/* Image */}
+                <img
+                  src="/Me1.jpeg"
+                  alt="Amritanshu Yadav"
+                  className="object-cover w-full h-full filter grayscale contrast-125 group-hover/img:grayscale-0 transition-all duration-700"
+                />
+                
+                {/* HUD Coordinates / Status Overlay */}
+                <div className="absolute bottom-2 right-2 bg-black/70 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono text-cyan-400 z-10 select-none">
+                  AVATAR: Me1.jpeg
+                </div>
+              </div>
+
+              {/* Simulated Live Console logs - appearing below the image */}
+              <div className="flex-1 flex flex-col justify-end font-mono text-[10px] space-y-1.5 text-left select-none scrollbar-cyber overflow-y-auto pr-1">
+                <div className="text-gray-600 mb-1 border-b border-white/5 pb-1 text-[8px]">
+                  * SYSTEM LOG STREAM - BELOW AVATAR FEED *
                 </div>
                 
                 <AnimatePresence initial={false}>
@@ -363,7 +400,7 @@ export function Hero() {
                       animate={{ opacity: 1, x: 0, y: 0 }}
                       exit={{ opacity: 0, scale: 0.95, y: -5 }}
                       transition={{ duration: 0.3 }}
-                      className={`flex items-start gap-2 leading-relaxed ${log.color}`}
+                      className={`flex items-start gap-1.5 leading-normal ${log.color}`}
                     >
                       <span className="text-gray-600 select-none">&gt;</span>
                       <span>{log.text}</span>
