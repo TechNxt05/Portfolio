@@ -131,7 +131,6 @@ export function SystemsArchitecture() {
     setIsSimulating(true);
     setSimLogIdx(1);
     
-    // Simulate steps pulsing
     let step = 0;
     const interval = setInterval(() => {
       if (step < activeSystem.steps.length) {
@@ -147,23 +146,21 @@ export function SystemsArchitecture() {
   };
 
   return (
-    <section id="architecture" className="py-24 px-6 md:px-12 bg-black overflow-hidden relative dot-matrix-fine border-t border-white/5">
+    <section id="architecture" className="py-24 px-6 md:px-12 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wider uppercase font-mono">
+          <span className="inline-block py-1 px-3 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold tracking-wider uppercase font-mono">
             Interactive Engineering Showcase
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
-            Systems <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-indigo-500">Architecture Canvas</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-foreground leading-tight">
+            Systems <span className="text-primary/70">Architecture Canvas</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-400 font-sans">
-            Toggle between core production architectures. Click nodes to trace telemetry pathways, verify safety middleware pipelines, and review real-time execution outputs.
+          <p className="text-base sm:text-lg text-muted-foreground font-sans">
+            Toggle between core architectures. Click nodes to trace telemetry pathways, verify safety middleware pipelines, and review execution outputs.
           </p>
         </div>
 
-        {/* Dynamic Navigation Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           {systems.map((sys) => (
             <button
@@ -175,8 +172,8 @@ export function SystemsArchitecture() {
               }}
               className={`flex items-center gap-2 py-2.5 px-5 rounded-xl border text-sm font-mono transition-all cursor-pointer ${
                 activeSystemId === sys.id
-                  ? "bg-indigo-600/15 border-indigo-500/40 text-white shadow-glow"
-                  : "bg-white/2 border-white/5 text-gray-400 hover:bg-white/5 hover:text-white"
+                  ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                  : "bg-card border-border text-muted-foreground hover:bg-muted hover:text-foreground"
               }`}
             >
               {sys.icon}
@@ -185,16 +182,11 @@ export function SystemsArchitecture() {
           ))}
         </div>
 
-        {/* Architecture Layout Sandbox */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* LEFT PANEL: SVG Canvas Graph */}
-          <div className="lg:col-span-8 bg-white/2 border border-white/5 rounded-3xl p-6 relative flex flex-col justify-center min-h-[400px] shadow-2xl overflow-hidden">
+          <div className="lg:col-span-8 bg-card border border-border rounded-3xl p-6 relative flex flex-col justify-center min-h-[400px] shadow-sm overflow-hidden">
             
-            {/* SVG lines backdrop */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-              
-              {/* Render links */}
               {activeSystem.connections.map((conn, cIdx) => {
                 const fromNode = activeSystem.steps[conn.from];
                 const toNode = activeSystem.steps[conn.to];
@@ -207,22 +199,22 @@ export function SystemsArchitecture() {
                       y1={`${fromNode.y}%`}
                       x2={`${toNode.x}%`}
                       y2={`${toNode.y}%`}
-                      stroke={isPathActive ? "rgba(99, 102, 241, 0.4)" : "rgba(255, 255, 255, 0.05)"}
-                      strokeWidth={isPathActive ? 1.5 : 0.8}
-                      className="transition-all duration-300"
+                      stroke={isPathActive ? "currentColor" : "currentColor"}
+                      strokeOpacity={isPathActive ? 0.4 : 0.1}
+                      strokeWidth={isPathActive ? 1.5 : 1}
+                      className="text-primary transition-all duration-300"
                     />
                     
-                    {/* Animated moving pulse flow along path */}
                     {isPathActive && (
                       <line
-                        x1={`${fromNode.x}%`}
-                        y1={`${fromNode.y}%`}
-                        x2={`${toNode.x}%`}
-                        y2={`${toNode.y}%`}
-                        stroke="rgba(6, 182, 212, 0.8)"
-                        strokeWidth={1.5}
-                        strokeDasharray="4 16"
-                        className="animate-[scan_3s_linear_infinite]"
+                         x1={`${fromNode.x}%`}
+                         y1={`${fromNode.y}%`}
+                         x2={`${toNode.x}%`}
+                         y2={`${toNode.y}%`}
+                         stroke="currentColor"
+                         strokeWidth={1.5}
+                         strokeDasharray="4 16"
+                         className="text-primary animate-[scan_3s_linear_infinite]"
                       />
                     )}
                   </g>
@@ -230,36 +222,35 @@ export function SystemsArchitecture() {
               })}
             </svg>
 
-            {/* Render Node Blocks */}
             <div className="absolute inset-0 pointer-events-none">
               {activeSystem.steps.map((step, sIdx) => {
                 const isActive = activeStepIdx === sIdx;
-                let statusColor = "border-white/10 bg-black/60 text-gray-400";
-                if (step.status === "success") statusColor = "border-emerald-500/30 bg-emerald-950/20 text-emerald-400";
-                if (step.status === "active") statusColor = "border-cyan-500/30 bg-cyan-950/20 text-cyan-400";
-                if (isActive) statusColor = "border-indigo-500 bg-indigo-950/40 text-white shadow-purple-glow ring-2 ring-indigo-500/25";
+                
+                let statusClass = "bg-muted border-border text-muted-foreground";
+                if (step.status === "success") statusClass = "bg-green-100/50 border-green-200 text-green-700 dark:bg-green-900/30 dark:border-green-800 dark:text-green-400";
+                if (step.status === "active") statusClass = "bg-blue-100/50 border-blue-200 text-blue-700 dark:bg-blue-900/30 dark:border-blue-800 dark:text-blue-400";
+                if (isActive) statusClass = "bg-primary border-primary text-primary-foreground shadow-md ring-2 ring-primary/20 scale-105";
 
                 return (
                   <button
                     key={sIdx}
                     onClick={() => setActiveStepIdx(sIdx)}
                     style={{ left: `${step.x}%`, top: `${step.y}%` }}
-                    className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-xl border p-3 flex flex-col items-center justify-center font-mono text-[10px] w-[130px] shadow-lg transition-all duration-300 pointer-events-auto cursor-pointer ${statusColor}`}
+                    className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-xl border p-3 flex flex-col items-center justify-center font-mono text-[10px] w-[130px] shadow-sm transition-all duration-300 pointer-events-auto cursor-pointer ${statusClass}`}
                   >
-                    <span className="font-bold tracking-tight text-center leading-none text-white block mb-0.5">{step.name}</span>
-                    <span className="text-[8px] text-gray-500 text-center font-medium leading-none block">{step.role}</span>
+                    <span className="font-bold tracking-tight text-center leading-none block mb-1">{step.name}</span>
+                    <span className="text-[8px] opacity-80 text-center font-medium leading-none block">{step.role}</span>
                   </button>
                 );
               })}
             </div>
 
-            {/* Simulating Overlay Trigger */}
             <div className="absolute bottom-4 left-4 flex items-center gap-3 pointer-events-auto z-20">
               <Button
                 onClick={handleRunSimulation}
                 disabled={isSimulating}
                 size="sm"
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs font-mono rounded-lg h-8 px-4 flex items-center gap-1.5"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xs font-mono rounded-lg h-8 px-4 flex items-center gap-1.5"
               >
                 {isSimulating ? (
                   <>
@@ -267,39 +258,36 @@ export function SystemsArchitecture() {
                   </>
                 ) : (
                   <>
-                    <Play size={12} fill="currentColor" /> INITIATE TELEMETRY SIM
+                    <Play size={12} fill="currentColor" /> INITIATE SIMULATION
                   </>
                 )}
               </Button>
             </div>
 
-            <div className="absolute top-4 right-4 font-mono text-[9px] text-gray-500">
+            <div className="absolute top-4 right-4 font-mono text-[9px] text-muted-foreground">
               ACTIVE_SYSTEM: {activeSystem.id.toUpperCase()}_ENV
             </div>
 
           </div>
 
-          {/* RIGHT PANEL: Explainers and Terminal Output */}
           <div className="lg:col-span-4 flex flex-col gap-6 justify-between items-stretch">
             
-            {/* Context Explainer Box */}
-            <div className="bg-white/2 border border-white/5 rounded-3xl p-6 text-left flex-1 flex flex-col justify-between shadow-xl">
+            <div className="bg-card border border-border rounded-3xl p-6 text-left flex-1 flex flex-col justify-between shadow-sm">
               <div>
-                <span className="inline-block py-0.5 px-2 rounded bg-indigo-500/10 border border-indigo-500/25 text-indigo-400 text-[10px] font-bold font-mono uppercase tracking-wider mb-3">
+                <span className="inline-block py-0.5 px-2 rounded bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold font-mono uppercase tracking-wider mb-3">
                   System Context
                 </span>
-                <h4 className="text-lg font-bold text-white tracking-tight leading-none mb-1">
+                <h4 className="text-lg font-bold text-foreground tracking-tight leading-none mb-1">
                   {activeSystem.name}
                 </h4>
-                <p className="text-xs font-mono text-cyan-400 mb-3 font-semibold">
+                <p className="text-xs font-mono text-primary mb-3 font-semibold">
                   {activeSystem.tagline}
                 </p>
-                <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-sans mb-4">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed font-sans mb-4">
                   {activeSystem.description}
                 </p>
               </div>
 
-              {/* Step Detail display */}
               <AnimatePresence mode="wait">
                 {activeStepIdx !== null ? (
                   <motion.div
@@ -308,36 +296,35 @@ export function SystemsArchitecture() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="p-3 bg-white/2 rounded-2xl border border-white/5 font-mono text-xs space-y-1.5"
+                    className="p-3 bg-muted rounded-2xl border border-border font-mono text-xs space-y-1.5"
                   >
-                    <div className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                      <CheckCircle size={10} className="text-cyan-400 animate-pulse" />
+                    <div className="text-[10px] text-primary font-bold uppercase tracking-wider flex items-center gap-1.5">
+                      <CheckCircle size={10} className="text-primary animate-pulse" />
                       Node Audit: {activeSystem.steps[activeStepIdx].name}
                     </div>
-                    <p className="text-gray-400 text-[11px] leading-relaxed font-sans font-medium">
+                    <p className="text-muted-foreground text-[11px] leading-relaxed font-sans font-medium">
                       {activeSystem.steps[activeStepIdx].details}
                     </p>
                   </motion.div>
                 ) : (
-                  <div className="p-3 bg-white/2 rounded-2xl border border-white/5 border-dashed font-mono text-[10px] text-gray-500 text-center py-6 leading-relaxed">
-                    Hover or click on any system node to inspect execution details and architectural parameters.
+                  <div className="p-3 bg-muted rounded-2xl border border-border border-dashed font-mono text-[10px] text-muted-foreground text-center py-6 leading-relaxed">
+                    Hover or click on any system node to inspect execution details and parameters.
                   </div>
                 )}
               </AnimatePresence>
             </div>
 
-            {/* Simulated execution terminal log console */}
-            <div className="bg-black border border-white/5 rounded-3xl p-5 font-mono text-[11px] text-gray-500 min-h-[160px] flex flex-col justify-between text-left shadow-inner relative terminal-scanner">
-              <div className="flex items-center justify-between border-b border-white/5 pb-2 mb-2 text-[9px] text-gray-600">
+            <div className="bg-muted border border-border rounded-3xl p-5 font-mono text-[11px] text-muted-foreground min-h-[160px] flex flex-col justify-between text-left shadow-sm relative">
+              <div className="flex items-center justify-between border-b border-border pb-2 mb-2 text-[9px] text-muted-foreground">
                 <span>SIMULATED_FEED.LOG</span>
-                <span className="text-cyan-400 animate-pulse">● LIVE</span>
+                <span className="text-primary animate-pulse">● LIVE</span>
               </div>
               
               <div className="flex-1 flex flex-col justify-end space-y-1.5">
                 {activeSystem.consoleLogs.slice(0, simLogIdx).map((log, lIdx) => (
                   <div key={lIdx} className="leading-tight flex items-start gap-1">
-                    <span className="text-gray-700 font-bold select-none">&gt;</span>
-                    <span className={log.includes("SAFE") || log.includes("Grounded") ? "text-emerald-400" : log.includes(" danger") ? "text-red-400" : "text-gray-400"}>
+                    <span className="text-primary font-bold select-none">&gt;</span>
+                    <span className="text-foreground opacity-80">
                       {log}
                     </span>
                   </div>
