@@ -45,7 +45,7 @@ export function LiveMetricsStrip() {
     { value: 1, suffix: "", label: "NPM Package", icon: <Terminal className="text-primary w-4 h-4" /> },
     { value: 2, suffix: "", label: "Research Internships", icon: <Cpu className="text-primary w-4 h-4" /> },
     { value: 3, suffix: "+", label: "Live Deployed Systems", icon: <Layers className="text-primary w-4 h-4" /> },
-    { value: 772, suffix: " CGPA", label: "CGPA (Out of 10.0)", icon: <Award className="text-primary w-4 h-4" /> }
+    { value: 790, suffix: " CGPA", label: "CGPA (Out of 10.0)", icon: <Award className="text-primary w-4 h-4" /> }
   ];
 
   return (
@@ -69,7 +69,7 @@ export function LiveMetricsStrip() {
                 </div>
                 <div className="text-2xl font-black text-foreground font-mono tracking-tight flex items-baseline">
                   {item.label.includes("CGPA") ? (
-                    <span>7.72</span>
+                    <span>7.90</span>
                   ) : (
                     <>
                       <AnimatedCounter value={item.value} />

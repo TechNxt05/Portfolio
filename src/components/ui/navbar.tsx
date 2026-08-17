@@ -63,7 +63,7 @@ export function Navbar() {
                     </button>
 
                     <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted">
-                        <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank">Resume</Link>
+                        <Link href="https://drive.google.com/file/d/1rMWkycbAZNF4pkoDeGfyMsWgvgMj-jVx/view?usp=drive_link" target="_blank">Resume</Link>
                     </Button>
                 </div>
 
@@ -105,7 +105,7 @@ export function Navbar() {
                             </Link>
                         ))}
                         <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-                            <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank">Resume</Link>
+                            <Link href="https://drive.google.com/file/d/1rMWkycbAZNF4pkoDeGfyMsWgvgMj-jVx/view?usp=drive_link" target="_blank">Resume</Link>
                         </Button>
                     </motion.div>
                 )}

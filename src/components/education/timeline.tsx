@@ -10,7 +10,7 @@ const education = [
         institution: "International Institute of Information Technology, Naya Raipur",
         degree: "B.Tech in Electronics and Communication Engineering",
         duration: "2022 – 2026",
-        score: "CGPA: 7.72",
+        score: "CGPA: 7.90",
         details: ["Data Structures & Algorithms", "Operating Systems", "DBMS", "System Design", "Machine Learning"],
         icon: <GraduationCap className="text-primary" size={24} />,
         active: true,

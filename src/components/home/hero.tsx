@@ -139,7 +139,7 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white/10 hover:bg-white/5 bg-transparent text-white rounded-xl h-12 px-6">
-              <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank" className="flex items-center gap-2">
+              <Link href="https://drive.google.com/file/d/1rMWkycbAZNF4pkoDeGfyMsWgvgMj-jVx/view?usp=drive_link" target="_blank" className="flex items-center gap-2">
                 <FileText size={16} /> Resume
               </Link>
             </Button>
