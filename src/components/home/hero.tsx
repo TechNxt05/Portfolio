@@ -168,7 +168,7 @@ export function Hero() {
               style={{ transform: "translateZ(-30px)" }}
               className="absolute inset-0 rounded-2xl bg-black/40 border border-white/5 overflow-hidden pointer-events-none"
             >
-              <CanvasNetwork />
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
             </div>
 
             {/* LAYER 2: The Core Console Terminal Panel (middle layer, rich glassmorphism) */}
