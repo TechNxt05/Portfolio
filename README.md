@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio, built with Next.js, specialized Reac
 
 ## 🚀 Live Demo
 
-[amritanshuyadav.vercel.app](https://amritanshuyadav.vercel.app) *(Update this link once deployed)*
+[portfolio-six-orcin-80f1sxykyy.vercel.app](https://portfolio-six-orcin-80f1sxykyy.vercel.app/)
 
 ## 🛠️ Built With
 
