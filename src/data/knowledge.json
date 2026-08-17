@@ -200,23 +200,23 @@
       "tagline": "Datadog for LLM Agents",
       "description": "A production-grade SaaS platform providing comprehensive observability, automated evaluation, and adversarial stress-testing for LLM systems, RAG apps, and multi-agent workflows.",
       "metrics": {
-        "evaluation": "5-Point Deterministic Engine",
-        "hallucination": "Sentence-level TF-IDF similarity",
-        "safety": "Zero-LLM latency safety scoring",
+        "evaluation": "Multi-Stage HallucinationGuard (TF-IDF, DeBERTa, LLM Judge)",
+        "observability": "Trajectory Replay & Failure Analyzer",
+        "safety": "Aegis Safety Middleware Interceptor",
         "database": "Multi-tenant PostgreSQL + pgvector"
       },
       "highlights": [
-        "Deterministic scoring engine evaluating hallucination, faithfulness, prompt injection risk, tool abuse, and compliance.",
-        "Integrated adversarial test suite running context poisoning, prompt injections, and PII stress simulations.",
-        "Multi-tenant framework with robust FastAPI backend, Next.js 14 dashboard, and integrated Python SDK."
+        "Features a Multi-Stage HallucinationGuard using TF-IDF, DeBERTa, and LLM Judges for cost-efficient grounding checks.",
+        "Logs and visualizes execution trajectories using React Flow to trace failure propagations and 'blind spots'.",
+        "Includes a Claim Verifier that generates sentence-level citation verification mapped to source chunks."
       ],
       "tech_stack": [
         "FastAPI",
         "Next.js",
         "PostgreSQL",
         "pgvector",
-        "Docker",
-        "TF-IDF"
+        "React Flow",
+        "DeBERTa"
       ],
       "links": {
         "github": "https://github.com/TechNxt05/AuditAI",
@@ -255,21 +255,21 @@
       "tagline": "7-Agent LangGraph Threat Swarm",
       "description": "An agentic investigation platform orchestrating multimodal analysis and React Flow graphs to assist victims of digital fraud.",
       "metrics": {
-        "agents": "7-Agent Collaborative Graph",
-        "flow": "Real-time attack path mapping",
-        "vision": "Gemini Vision OCR extraction"
+        "agents": "7-Agent Collaborative Graph (Evidence, Intel, Recovery, etc.)",
+        "resilience": "Postgres-Backed State Checkpointer",
+        "memory": "Entity Relationship Knowledge Graph (MongoDB)"
       },
       "highlights": [
-        "Orchestrates a 7-agent swarm with specialized nodes (ingestion, planner, researcher, evidence parser, reporter).",
-        "Generates interactive React Flow graph visualization of attacks, mapping evidence nodes to threat models.",
-        "Real-time update streams managed using WebSockets and backed by a flexible MongoDB schema."
+        "Orchestrates a 7-agent swarm bounded by strict Pydantic Output Contracts and Swarm Supervisor Limits.",
+        "Preserves execution states across backend restarts using an asyncpg State Checkpointer.",
+        "Prevents infinite external query loops using an OSINT Circuit Breaker with exponential backoff."
       ],
       "tech_stack": [
         "LangGraph",
         "Gemini Vision",
         "FastAPI",
         "MongoDB",
-        "WebSockets",
+        "PostgreSQL",
         "React Flow"
       ],
       "links": {
@@ -281,23 +281,23 @@
       "name": "RAGOps",
       "title": "Enterprise RAG Platform",
       "tagline": "Project-Scoped Isolated Retrieval Engine",
-      "description": "An enterprise-grade document intelligence platform featuring RBAC, multi-model support, and isolated workspace embeddings.",
+      "description": "An enterprise-grade document intelligence platform featuring RBAC, multi-model support, and advanced Corrective RAG architectures.",
       "metrics": {
-        "latency": "Sub-200ms document chunking",
-        "citations": "Sentence-grounded retrieval source validation",
-        "security": "Workspace isolation via pgvector and FAISS"
+        "retrieval": "Multi-Query Retrieval (FAISS + BM25)",
+        "reranking": "BGE Cross-Encoder Reranker",
+        "evaluation": "Confidence Gate & RAGAS Evaluator"
       },
       "highlights": [
-        "Enforces database-level tenant isolation, ensuring zero leakages across distinct project knowledge bases.",
-        "Renders precise chunk citations mapping response claims back to raw pdf snippets.",
-        "Includes a retrieval inspector console for debugging vector similarity distances."
+        "Implements Semantic Routing and a Semantic Cache for instant answering of common queries.",
+        "Uses a Confidence Gate to trigger a Self-Correction Loop or an Absence Prover if context is lacking.",
+        "Leverages a BGE Cross-Encoder Reranker and Multi-Query engine (FAISS + BM25) for top-tier retrieval accuracy."
       ],
       "tech_stack": [
         "LangChain",
         "FastAPI",
         "PostgreSQL",
         "FAISS",
-        "Next.js"
+        "BGE Reranker"
       ],
       "links": {
         "github": "https://github.com/TechNxt05/RAGOps",

@@ -28,8 +28,8 @@ export function FlagshipProjects() {
     {
       name: "RAGOps",
       title: "Enterprise RAG Platform",
-      description: "Document intelligence platform featuring project workspace Isolation, retrieval debugging, and citation mappings.",
-      techStack: ["LangChain", "FastAPI", "PostgreSQL", "FAISS"],
+      description: "An enterprise-grade document intelligence platform featuring RBAC, multi-model support, and advanced Corrective RAG architectures.",
+      techStack: ["LangChain", "FastAPI", "PostgreSQL", "FAISS", "BGE Reranker"],
       links: {
         github: "https://github.com/TechNxt05/RAGOps",
         live: "https://ragops.vercel.app/"
@@ -40,8 +40,8 @@ export function FlagshipProjects() {
     {
       name: "AuditAI",
       title: "AI Reliability & Observability Platform",
-      description: "A production-grade platform offering observability, automated deterministic evaluations, and adversarial stress-testing for RAG systems.",
-      techStack: ["FastAPI", "Next.js", "PostgreSQL", "pgvector", "Docker"],
+      description: "A production-grade SaaS platform providing comprehensive observability, automated evaluation, and adversarial stress-testing for LLM workflows.",
+      techStack: ["FastAPI", "Next.js", "PostgreSQL", "pgvector", "React Flow", "DeBERTa"],
       links: {
         github: "https://github.com/TechNxt05/AuditAI",
         live: "https://audit-ai-eosin.vercel.app/"
@@ -52,8 +52,8 @@ export function FlagshipProjects() {
     {
       name: "CyberGuardAI",
       title: "AI-Native Cyber Investigation Platform",
-      description: "An agentic cyber incident forensics platform executing multimodal file scraping and threat mapping.",
-      techStack: ["LangGraph", "Gemini Vision", "FastAPI", "MongoDB", "WebSockets"],
+      description: "An agentic investigation platform orchestrating multimodal analysis and React Flow graphs to assist victims of digital fraud.",
+      techStack: ["LangGraph", "Gemini Vision", "FastAPI", "MongoDB", "PostgreSQL", "React Flow"],
       links: {
         github: "https://github.com/TechNxt05/CyberGuard",
         live: "https://cyber-guard-liard.vercel.app/"

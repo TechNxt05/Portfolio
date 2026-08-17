@@ -37,14 +37,14 @@ export function SystemsArchitecture() {
       name: "LangGraph Cyber Swarm",
       icon: <Users size={16} />,
       tagline: "7-Agent Collaborative Graph (CyberGuardAI)",
-      description: "How the LangGraph multi-agent swarm operates dynamically: parsing user evidence, orchestrating autonomous web search, constructing attack nodes, and streaming findings.",
+      description: "How the LangGraph multi-agent swarm operates dynamically: parsing user evidence, orchestrating autonomous web search, applying circuit breakers, and preserving state in PostgreSQL.",
       steps: [
-        { name: "User Evidence", role: "OCR Ingestion", status: "success", x: 10, y: 50, details: "Accepts documents, screenshots, and system dumps. Runs Gemini Vision to extract OCR text." },
-        { name: "Swarm Planner", role: "LangGraph Router", status: "active", x: 30, y: 25, details: "Parses intent and splits forensic requests into concurrent tasks across specialized agent nodes." },
-        { name: "Threat Researcher", role: "Tavily Search Agent", status: "idle", x: 55, y: 15, details: "Queries active cyber security databases and search APIs to match IOCs and attack signatures." },
-        { name: "Evidence Parser", role: "Verification Agent", status: "idle", x: 55, y: 50, details: "Cross-checks facts against local threat dictionaries to prune false telemetry." },
-        { name: "WebSocket Stream", role: "FastAPI Gateway", status: "idle", x: 80, y: 50, details: "Pushes real-time execution states and parsed telemetry back to the user frontend." },
-        { name: "Attack Tree", role: "React Flow Rendering", status: "idle", x: 80, y: 85, details: "Generates an interactive canvas showing attack vectors, risks, and recommended actions." }
+        { name: "Output Contracts", role: "Pydantic Verification", status: "success", x: 10, y: 50, details: "Validates incoming data against strict schemas. Automatically retries or escalates upon malformed input." },
+        { name: "Swarm Supervisor", role: "LangGraph Router", status: "active", x: 30, y: 25, details: "Monitors delegation depth and spawn limits (max 5 active subagents) to prevent runaway execution." },
+        { name: "7-Agent Swarm", role: "Threat/Evidence/Recovery", status: "idle", x: 55, y: 15, details: "Concurrent specialized nodes (ThreatIntel, Evidence, Strategy, Auth, Prev) executing the investigation." },
+        { name: "OSINT Breaker", role: "Exponential Backoff", status: "idle", x: 55, y: 50, details: "Circuit breaker protecting external DuckDuckGo/Twitter API calls to ensure graceful degradation." },
+        { name: "State Checkpointer", role: "AsyncPostgresSaver", status: "idle", x: 80, y: 50, details: "Persists execution state in PostgreSQL, ensuring process restart resilience." },
+        { name: "Knowledge Graph", role: "React Flow Rendering", status: "idle", x: 80, y: 85, details: "Generates an interactive canvas showing attack vectors, cross-case linkages, and entity relations." }
       ],
       connections: [
         { from: 0, to: 1 },
@@ -55,26 +55,54 @@ export function SystemsArchitecture() {
         { from: 4, to: 5 }
       ],
       consoleLogs: [
-        "Initializing LangGraph swarm state...",
-        "Executing Gemini Vision parser on evidence_ocr.png",
-        " planner: Spawning threat-researcher and evidence-parser concurrently.",
-        " threat-researcher: querying Tavily API for 'UPI fraud signature'",
-        " evidence-parser: validating source-grounding index. Cosine: 0.96",
-        "Stream connection established via WebSockets. Rendering attack nodes."
+        "Initializing LangGraph swarm state from Postgres checkpointer...",
+        "Validating Pydantic output contract for Evidence Agent... [PASS]",
+        " supervisor: Spawning ThreatIntel and Strategy agents concurrently.",
+        " osint-breaker: Twitter API rate limited. Triggering exponential backoff (Retry 1/3).",
+        " threat-intel: Extracted new attack vectors.",
+        "Flushing updated state graph to MongoDB Knowledge Graph..."
       ]
     },
     {
       id: "rag",
-      name: "Isolated Enterprise RAG",
+      name: "Corrective Enterprise RAG",
       icon: <Layers size={16} />,
-      tagline: "Workspace Isolation & Citations (RAGOps)",
-      description: "Enterprise knowledge base querying with zero database leakage. Embeddings, isolated vector queries, retrieval inspector audits, and strict source checks.",
+      tagline: "Corrective RAG & RAGAS Evaluator (RAGOps)",
+      description: "Advanced Retrieval-Augmented Generation pipeline featuring Semantic Routing, BGE Cross-Encoder Reranking, and Confidence Gating for high-reliability outputs.",
       steps: [
-        { name: "User Query", role: "Query Entry", status: "success", x: 10, y: 50, details: "Accepts natural language user input. Applies prompt sanitization filters." },
-        { name: "Aegis Shield", role: "Safety Middleware", status: "active", x: 30, y: 50, details: "Runs regex and embeddings checks to detect prompt injections and SQL vector triggers." },
-        { name: "Workspace Router", role: "Metadata Filter", status: "idle", x: 55, y: 25, details: "Restricts vector retrieval strictly to user's project ID, bypassing global indexes." },
-        { name: "FAISS Vector", role: "pgvector Storage", status: "idle", x: 55, y: 75, details: "Queries nearest-neighbor indexes. Performs high-speed cosine similarity lookup." },
-        { name: "Citation Audit", role: "Deterministic Ingestion", status: "idle", x: 80, y: 50, details: "Cross-checks LLM response tokens against source documents, citing paragraph offsets." }
+        { name: "Semantic Router", role: "Query Strategy", status: "success", x: 10, y: 50, details: "Checks Versioned Semantic Cache. Instantly returns cache hits, or routes misses to retrieval." },
+        { name: "Multi-Query", role: "FAISS + BM25 Fusion", status: "active", x: 30, y: 50, details: "Fuses sparse and dense vector retrieval, applying workspace constraint filters." },
+        { name: "BGE Reranker", role: "Cross-Encoder", status: "idle", x: 55, y: 25, details: "Re-scores and filters retrieved chunks to extract the top-N most relevant context windows." },
+        { name: "Confidence Gate", role: "Self-Correction Loop", status: "idle", x: 55, y: 75, details: "Evaluates score (>=0.65). Triggers Absence Prover or Self-Correction if confidence is low." },
+        { name: "Claim Verifier", role: "Post-Gen Audit", status: "idle", x: 80, y: 50, details: "Cross-checks LLM response claims against source documents, logging RAGAS triad metrics." }
+      ],
+      connections: [
+        { from: 0, to: 1 },
+        { from: 1, to: 2 },
+        { from: 2, to: 3 },
+        { from: 3, to: 4 }
+      ],
+      consoleLogs: [
+        "Query parsed: 'Summarize the compliance rules for project A'",
+        "Semantic Cache Miss. Routing to Multi-Query Engine...",
+        "FAISS + BM25 Retrieval completed. K=10 chunks.",
+        "BGE Cross-Encoder reranking applied. Top-3 chunks selected.",
+        "Confidence Gate evaluated score: 0.82 (PASS)",
+        "Response generated. Claim Verifier matched 94% of tokens to context."
+      ]
+    },
+    {
+      id: "audit",
+      name: "Reliability & Observability",
+      icon: <Shield size={16} />,
+      tagline: "Failure Tracing & Evaluation (AuditAI)",
+      description: "A comprehensive deterministic evaluation engine designed to ingest agent execution trajectories, trace failure propagation, and guard against hallucinations.",
+      steps: [
+        { name: "Trajectory Ingestion", role: "Python SDK / API", status: "success", x: 10, y: 50, details: "Accepts multi-step execution traces from agents via high-throughput REST or MCP endpoints." },
+        { name: "HallucinationGuard", role: "TF-IDF & DeBERTa", status: "active", x: 30, y: 50, details: "3-Stage cascade: TF-IDF for fast filtering, DeBERTa for semantic check, LLM Judge for complex cases." },
+        { name: "Failure Analyzer", role: "Propagation Tracing", status: "idle", x: 55, y: 20, details: "Calculates recoverability & efficiency scores by mapping step-by-step failure propagation." },
+        { name: "Claim Verifier", role: "Sentence Citation", status: "idle", x: 55, y: 80, details: "Extracts granular claims and computes Jaccard similarity against retrieval chunks." },
+        { name: "Trajectory Replay", role: "React Flow Visualization", status: "idle", x: 80, y: 50, details: "Provides step-by-step UI playback of agent reasoning and tool executions to identify blind spots." }
       ],
       connections: [
         { from: 0, to: 1 },
@@ -84,42 +112,12 @@ export function SystemsArchitecture() {
         { from: 3, to: 4 }
       ],
       consoleLogs: [
-        "Query parsed: 'Summarize compliance rules for project A'",
-        "Applying aegis-agent middleware... Max risk score: 0.05 (SAFE)",
-        "Applying pgvector filters: workspace_id = 'prj_99af2'",
-        "FAISS: Cosine distance calculation completed. K=4 chunks.",
-        "Response generated. Citation checker matched 94% of tokens to context."
-      ]
-    },
-    {
-      id: "safety",
-      name: "Zero-Trust Agent Safety",
-      icon: <Shield size={16} />,
-      tagline: "Runtime Safety & Policy Firewall (Aegis-Agent)",
-      description: "A pluggable firewall middleware intercepting raw agent model output. Evaluates hallucinations and injections, computing a weighted risk factor.",
-      steps: [
-        { name: "Model Output", role: "Raw LLM Response", status: "success", x: 10, y: 50, details: "Intercepts the raw output string from models (GPT-4, Claude, Gemini)." },
-        { name: "Aegis-Agent", role: "Middleware Core", status: "active", x: 30, y: 50, details: "Initiates parallel risk scoring detectors on raw response tokens." },
-        { name: "Hallucination Det.", role: "Semantic Checker", status: "idle", x: 55, y: 20, details: "Checks cosine similarity distance against document embeddings to flag hallucinations." },
-        { name: "Injection Det.", role: "Jailbreak Classifier", status: "idle", x: 55, y: 50, details: "Checks against 30+ regex jailbreak templates and instruction override prompts." },
-        { name: "PII & PII Checker", role: "Compliance Auditor", status: "idle", x: 55, y: 80, details: "Detects passwords, private API keys, credit cards, SSN, and database seeds." },
-        { name: "Policy Gate", role: "Warn / Block / Rewrite", status: "idle", x: 80, y: 50, details: "Applies action policies. High-risk vectors are instantly rewritten or blocked." }
-      ],
-      connections: [
-        { from: 0, to: 1 },
-        { from: 1, to: 2 },
-        { from: 1, to: 3 },
-        { from: 1, to: 4 },
-        { from: 2, to: 5 },
-        { from: 3, to: 5 },
-        { from: 4, to: 5 }
-      ],
-      consoleLogs: [
-        "Aegis-Agent intercepted raw string (480 chars).",
-        "Running hallucination check... Cosine similarity is 0.89 - Grounded.",
-        "Running prompt injection parser... Danger pattern: 'ignore previous' NOT found.",
-        "Running PII scanner... Danger pattern: 'API_KEY' NOT found.",
-        "Weighted risk calculated: 0.12 (LOW). Safe to propagate."
+        "Ingesting trajectory exec-12345 from Python SDK...",
+        "Evaluating hallucination... Stage 1 (TF-IDF) skipped.",
+        "Running Stage 2 (DeBERTa-v3)... Grounding score: 0.98 (PASS).",
+        "Failure Analyzer: Detected tool failure at step 2. Recovery successful at step 3.",
+        "Recoverability Score computed: 0.85.",
+        "Publishing execution graph to React Flow Trajectory Replay UI."
       ]
     }
   ];
