@@ -95,50 +95,50 @@ export function Hero() {
           
           {/* Badge */}
           <div className="flex items-center gap-3 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">
+            <span className="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-wide uppercase">
               <Cpu size={12} className="animate-spin-slow" /> AI Systems Lab
             </span>
           </div>
 
           {/* Dynamic Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-none">
-            Amritanshu Yadav
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-none">
+            Amritanshu <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">Yadav</span>
           </h1>
 
           {/* Specialization list */}
-          <p className="text-lg font-mono text-muted-foreground tracking-wide font-semibold">
-            AI Engineer · LLM Systems · Backend Infrastructure
+          <p className="text-lg font-mono text-cyan-500/70 tracking-wide font-semibold">
+            RAG • Agentic AI • LLM Evaluation • AI Reliability • AI Infrastructure
           </p>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl font-sans">
-            I build production-grade AI systems, focusing on LLM pipelines, reliability, RAG architectures, and multi-agent workflows.
+          <p className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-2xl font-sans">
+            I am an early-career AI Systems Engineer focused on building reliable, observable, and production-oriented AI systems.
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 border-y border-border py-4 max-w-xl font-mono text-xs text-muted-foreground">
+          <div className="grid grid-cols-3 gap-4 border-y border-white/5 py-4 max-w-xl font-mono text-xs text-gray-500">
             <div>
-              <span className="block text-foreground text-base font-bold">15+</span>
+              <span className="block text-white text-base font-bold">15+</span>
               AI Platforms Built
             </div>
             <div>
-              <span className="block text-foreground text-base font-bold">3</span>
+              <span className="block text-white text-base font-bold">3</span>
               IEEE Publications
             </div>
             <div>
-              <span className="block text-foreground text-base font-bold">npm package</span>
+              <span className="block text-white text-base font-bold">npm package</span>
               aegis-agent
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 pt-2">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium rounded-xl h-12 px-6">
+            <Button asChild size="lg" className="bg-cyan-500 text-black hover:bg-cyan-400 font-bold rounded-xl h-12 px-6">
               <Link href="#projects" className="flex items-center gap-2">
                 Explore Systems <ArrowRight size={16} />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-border hover:bg-muted bg-transparent hover:text-foreground rounded-xl h-12 px-6">
+            <Button asChild variant="outline" size="lg" className="border-white/10 hover:bg-white/5 bg-transparent text-white rounded-xl h-12 px-6">
               <Link href="https://drive.google.com/file/d/13VDMnp0VIXsz1seBq1XAzNJNQo_NTnrs/view?usp=sharing" target="_blank" className="flex items-center gap-2">
                 <FileText size={16} /> Resume
               </Link>
@@ -174,33 +174,33 @@ export function Hero() {
             {/* LAYER 2: The Core Console Terminal Panel (middle layer, rich glassmorphism) */}
             <div 
               style={{ transform: "translateZ(10px)", transformStyle: "preserve-3d" }}
-              className="absolute inset-4 rounded-2xl bg-card border border-border flex flex-col p-5 overflow-hidden shadow-sm select-none cursor-pointer group"
+              className="absolute inset-4 rounded-2xl bg-white/2 border border-white/5 flex flex-col p-5 overflow-hidden shadow-2xl select-none cursor-pointer group"
               onClick={cyclePhoto}
             >
               {/* Terminal bar */}
-              <div className="flex items-center justify-between border-b border-border pb-2 mb-2.5 font-mono text-[10px] text-muted-foreground">
+              <div className="flex items-center justify-between border-b border-white/5 pb-2 mb-2.5 font-mono text-[10px] text-gray-500">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-destructive/70" />
+                  <span className="w-2 h-2 rounded-full bg-red-500/70" />
                   <span className="w-2 h-2 rounded-full bg-yellow-500/70" />
                   <span className="w-2 h-2 rounded-full bg-green-500/70" />
-                  <span className="ml-2 font-semibold">VIEWER_MODULE</span>
+                  <span className="ml-2 font-bold text-cyan-500/50">VIEWER_MODULE</span>
                 </div>
               </div>
 
               {/* Title / Node Readout */}
-              <div className="w-full flex items-center justify-between font-mono text-[10px] text-foreground border-b border-border pb-2 mb-2.5 shrink-0">
+              <div className="w-full flex items-center justify-between font-mono text-[10px] text-white border-b border-white/5 pb-2 mb-2.5 shrink-0">
                 <div className="flex items-center gap-1 font-bold">
-                  <Target size={12} className="text-primary" />
+                  <Target size={12} className="text-cyan-400" />
                   <span>{photos[currentPhotoIdx].label}</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-primary bg-primary/5 px-2 py-0.5 rounded border border-primary/10">
-                  <span className="w-1 h-1 rounded-full bg-primary" />
+                <div className="flex items-center gap-1.5 text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+                  <span className="w-1 h-1 rounded-full bg-cyan-400" />
                   <span>{photos[currentPhotoIdx].tag}</span>
                 </div>
               </div>
 
               {/* PROFILE IMAGE SLIDESHOW: cycles on click */}
-              <div className="relative w-full flex-1 min-h-[200px] rounded-xl overflow-hidden border border-border bg-muted/30 mb-3 flex items-center justify-center group-hover:border-primary/20 transition-colors">
+              <div className="relative w-full flex-1 min-h-[200px] rounded-xl overflow-hidden border border-white/5 bg-black/50 mb-3 flex items-center justify-center group-hover:border-cyan-500/30 transition-colors">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentPhotoIdx}
@@ -224,28 +224,28 @@ export function Hero() {
               </div>
 
               {/* Telemetry caption details */}
-              <div className="w-full text-left font-mono space-y-1 bg-muted/50 border border-border rounded-lg p-2.5 shrink-0">
-                <div className="text-[10px] text-foreground font-bold uppercase tracking-wider flex items-center justify-between">
+              <div className="w-full text-left font-mono space-y-1 bg-black/40 border border-white/5 rounded-lg p-2.5 shrink-0">
+                <div className="text-[10px] text-white font-bold uppercase tracking-wider flex items-center justify-between">
                   <span>{photos[currentPhotoIdx].role}</span>
                 </div>
-                <p className="text-[9px] text-muted-foreground leading-normal font-sans">
+                <p className="text-[9px] text-gray-500 leading-normal font-sans">
                   {photos[currentPhotoIdx].desc}
                 </p>
               </div>
 
               {/* Slideshow dot indicators & interactive cycle prompt at bottom */}
-              <div className="w-full flex items-center justify-between pt-2 mt-2 border-t border-border text-muted-foreground font-mono text-[9px] shrink-0">
+              <div className="w-full flex items-center justify-between pt-2 mt-2 border-t border-white/5 text-gray-500 font-mono text-[9px] shrink-0">
                 <div className="flex items-center gap-1.5">
                   {photos.map((_, idx) => (
                     <span
                       key={idx}
                       className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                        idx === currentPhotoIdx ? "bg-primary w-3" : "bg-primary/20"
+                        idx === currentPhotoIdx ? "bg-cyan-400 w-3" : "bg-cyan-500/20"
                       }`}
                     />
                   ))}
                 </div>
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors">
+                <div className="flex items-center gap-1 hover:text-white transition-colors">
                   <RotateCw size={10} className="animate-spin-slow" />
                   <span>Click to cycle</span>
                 </div>
@@ -255,19 +255,19 @@ export function Hero() {
             {/* LAYER 3: The Front Stats Panel (highest layer, overlapping at bottom right) */}
             <div 
               style={{ transform: "translateZ(45px)" }}
-              className="absolute -right-4 -bottom-4 w-72 rounded-xl bg-card border border-border p-4 shadow-lg"
+              className="absolute -right-4 -bottom-4 w-72 rounded-xl bg-white/2 border border-white/10 p-4 shadow-2xl backdrop-blur-md"
             >
-              <div className="grid grid-cols-3 gap-2 font-mono text-[9px] text-muted-foreground text-center">
-                <div className="bg-muted py-2 rounded border border-border">
-                  <span className="block text-foreground font-bold text-xs">1450+</span>
+              <div className="grid grid-cols-3 gap-2 font-mono text-[9px] text-gray-400 text-center">
+                <div className="bg-black/50 py-2 rounded border border-white/5">
+                  <span className="block text-white font-bold text-xs">1450+</span>
                   CHESS ELO
                 </div>
-                <div className="bg-muted py-2 rounded border border-border">
-                  <span className="block text-foreground font-bold text-xs">3</span>
+                <div className="bg-black/50 py-2 rounded border border-white/5">
+                  <span className="block text-white font-bold text-xs">3</span>
                   IEEE PAPERS
                 </div>
-                <div className="bg-muted py-2 rounded border border-border">
-                  <span className="block text-foreground font-bold text-xs">3+</span>
+                <div className="bg-black/50 py-2 rounded border border-white/5">
+                  <span className="block text-white font-bold text-xs">3+</span>
                   DEPLOYMENTS
                 </div>
               </div>

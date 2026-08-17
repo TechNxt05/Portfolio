@@ -13,6 +13,7 @@ import { OpenSourcePackage } from "@/components/projects/open-source";
 import { ProjectTimeline } from "@/components/projects/timeline";
 import { Achievements } from "@/components/achievements/achievements";
 import { Contact } from "@/components/home/contact";
+import { AmritanshuOS } from "@/components/home/amritanshu-os";
 import { Footer } from "@/components/ui/footer";
 
 export default function Home() {
@@ -43,6 +44,8 @@ export default function Home() {
       <Achievements />
 
       <Contact />
+
+      <AmritanshuOS />
 
       <Footer />
     </main>

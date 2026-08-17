@@ -13,50 +13,50 @@ interface TechCategory {
 export function TechStack() {
   const categories: TechCategory[] = [
     {
-      name: "AI / Multi-Agent & RAG",
-      icon: <Layers className="text-primary w-4 h-4" />,
-      skills: ["LangGraph", "LangChain", "FAISS", "pgvector", "Gemini Pro/Flash", "GPT-4o API", "Groq", "Vector Ingestions"],
+      name: "Programming Languages",
+      icon: <Code className="text-cyan-400 w-4 h-4" />,
+      skills: ["Python", "C++", "C", "Java", "JavaScript", "TypeScript"],
     },
     {
-      name: "Core Backend Systems",
-      icon: <Code className="text-primary w-4 h-4" />,
-      skills: ["Python", "FastAPI", "C++ (Win32 Concurrency)", "Node.js", "Express.js", "WebSockets", "REST APIs", "SQLAlchemy"],
+      name: "AI & Machine Learning",
+      icon: <Layers className="text-cyan-400 w-4 h-4" />,
+      skills: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "OpenCV", "Deep Learning"],
     },
     {
-      name: "Modern Frontend UI",
-      icon: <Layout className="text-primary w-4 h-4" />,
-      skills: ["Next.js 15 (App Router)", "React 19", "TypeScript", "TailwindCSS", "Framer Motion", "React Flow", "Recharts", "shadcn/ui"],
+      name: "Generative AI & LLMs",
+      icon: <Cpu className="text-cyan-400 w-4 h-4" />,
+      skills: ["LLM APIs", "RAG", "Agentic AI", "LangChain", "LangGraph", "LlamaIndex", "Gemini", "Groq", "Tool Calling", "LLM Evaluation"],
     },
     {
-      name: "Databases & ORMs",
-      icon: <Database className="text-primary w-4 h-4" />,
-      skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "Redis", "SQLite", "NoSQL Schema Design"],
+      name: "Retrieval & Vector Systems",
+      icon: <Database className="text-cyan-400 w-4 h-4" />,
+      skills: ["FAISS", "pgvector", "Qdrant", "ChromaDB", "Embeddings", "Hybrid Retrieval", "BM25", "Reranking"],
     },
     {
-      name: "Infrastructure & DevOps",
-      icon: <HardDrive className="text-primary w-4 h-4" />,
-      skills: ["Docker", "Docker Compose", "Nginx", "AWS EC2", "CI/CD (GitHub Actions)", "Render", "Vercel"],
+      name: "Backend, DB & Cloud",
+      icon: <HardDrive className="text-cyan-400 w-4 h-4" />,
+      skills: ["FastAPI", "Django", "Node.js", "PostgreSQL", "MongoDB", "Neon", "AWS EC2", "Docker", "CI/CD"],
     },
     {
-      name: "Low-Level / Real-time",
-      icon: <SystemsIcon className="text-primary w-4 h-4" />,
-      skills: ["Win32 API Telemetry", "Multithread Concurrencies", "Real-time Signal Ingestion", "Deterministic Replay Loops"],
+      name: "Frontend & UI",
+      icon: <Layout className="text-cyan-400 w-4 h-4" />,
+      skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "React Flow", "Recharts"],
     }
   ];
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 bg-background relative overflow-hidden border-t border-border">
+    <section id="skills" className="py-24 px-6 md:px-12 bg-black relative overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold tracking-wider uppercase font-mono">
+          <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-wider uppercase font-mono">
             Operational Competencies
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-foreground leading-tight">
-            Technical <span className="text-primary/70">Expertise Stack</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+            Technical <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">Expertise Stack</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground font-sans">
+          <p className="text-base sm:text-lg text-gray-400 font-sans">
             A specialized stack focused on deterministic pipelines, high-density vector retrieval, real-time low-level telemetries, and secure middleware.
           </p>
         </div>
@@ -70,15 +70,15 @@ export function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.08 }}
-              className="relative w-full rounded-2xl border border-border p-6 flex flex-col justify-between bg-card transition-all hover:border-primary/20 shadow-sm"
+              className="relative w-full rounded-2xl border border-white/5 p-6 flex flex-col justify-between bg-white/2 transition-all hover:border-cyan-500/30 shadow-2xl backdrop-blur-sm"
             >
               <div className="w-full">
                 {/* Category Header */}
-                <div className="flex items-center gap-3 mb-5 border-b border-border pb-4">
-                  <div className="p-2.5 rounded-xl bg-muted border border-border flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3 mb-5 border-b border-white/5 pb-4">
+                  <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0">
                     {cat.icon}
                   </div>
-                  <h4 className="text-sm font-mono font-black text-foreground tracking-wider uppercase">
+                  <h4 className="text-sm font-mono font-black text-white tracking-wider uppercase">
                     {cat.name}
                   </h4>
                 </div>
@@ -89,7 +89,7 @@ export function TechStack() {
                     <Badge
                       key={skill}
                       variant="outline"
-                      className="border-border bg-muted text-muted-foreground font-mono text-[11px] px-2.5 py-1 hover:border-primary/30 hover:text-foreground transition-all cursor-default shadow-sm"
+                      className="border-white/5 bg-black/50 text-gray-400 font-mono text-[11px] px-2.5 py-1 hover:border-cyan-500/30 hover:text-white transition-all cursor-default shadow-sm"
                     >
                       {skill}
                     </Badge>

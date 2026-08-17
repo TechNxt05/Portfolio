@@ -34,7 +34,7 @@ export function FlagshipProjects() {
         github: "https://github.com/TechNxt05/RAGOps",
         live: "https://ragops.vercel.app/"
       },
-      icon: <Layers className="w-5 h-5 text-primary" />,
+      icon: <Layers className="w-5 h-5 text-emerald-400" />,
       category: ["AI", "Software Engg"],
     },
     {
@@ -46,7 +46,7 @@ export function FlagshipProjects() {
         github: "https://github.com/TechNxt05/AuditAI",
         live: "https://audit-ai-eosin.vercel.app/"
       },
-      icon: <Shield className="w-5 h-5 text-primary" />,
+      icon: <Shield className="w-5 h-5 text-emerald-400" />,
       category: ["AI", "Software Engg"],
     },
     {
@@ -58,7 +58,7 @@ export function FlagshipProjects() {
         github: "https://github.com/TechNxt05/CyberGuard",
         live: "https://cyber-guard-liard.vercel.app/"
       },
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <Cpu className="w-5 h-5 text-emerald-400" />,
       category: ["AI"],
     },
     {
@@ -67,7 +67,7 @@ export function FlagshipProjects() {
       description: "A scalable platform for community engagement and management.",
       techStack: ["React", "Node.js", "MongoDB"],
       links: {},
-      icon: <Globe className="w-5 h-5 text-primary" />,
+      icon: <Globe className="w-5 h-5 text-emerald-400" />,
       category: ["Software Engg"],
     },
     {
@@ -76,7 +76,7 @@ export function FlagshipProjects() {
       description: "AI-powered call analysis, transcription, and sentiment evaluation system.",
       techStack: ["Python", "FastAPI", "Next.js"],
       links: {},
-      icon: <Terminal className="w-5 h-5 text-primary" />,
+      icon: <Terminal className="w-5 h-5 text-emerald-400" />,
       category: ["AI", "ML"],
     },
     {
@@ -87,7 +87,7 @@ export function FlagshipProjects() {
       links: {
         live: "https://data-pilot-one.vercel.app/"
       },
-      icon: <BarChart2 className="w-5 h-5 text-primary" />,
+      icon: <BarChart2 className="w-5 h-5 text-emerald-400" />,
       category: ["AI", "Data Science"],
     },
     {
@@ -99,7 +99,7 @@ export function FlagshipProjects() {
         github: "https://github.com/TechNxt05/TemporalAI",
         live: "https://temporal-ai-six.vercel.app/"
       },
-      icon: <BarChart2 className="w-5 h-5 text-primary" />,
+      icon: <BarChart2 className="w-5 h-5 text-emerald-400" />,
       category: ["ML", "Data Science"],
     },
     {
@@ -111,7 +111,7 @@ export function FlagshipProjects() {
         github: "https://github.com/TechNxt05/Aegis-Agent",
         npm: "https://www.npmjs.com/package/aegis-agent"
       },
-      icon: <Shield className="w-5 h-5 text-primary" />,
+      icon: <Shield className="w-5 h-5 text-emerald-400" />,
       category: ["Software Engg", "AI"],
     },
     {
@@ -122,7 +122,7 @@ export function FlagshipProjects() {
       links: {
         live: "https://mumz-world-ai.vercel.app/"
       },
-      icon: <Bot className="w-5 h-5 text-primary" />,
+      icon: <Bot className="w-5 h-5 text-emerald-400" />,
       category: ["AI"],
     },
     {
@@ -134,7 +134,7 @@ export function FlagshipProjects() {
         github: "https://github.com/TechNxt05/Lead-Flow",
         live: "https://lead-flow1.vercel.app/"
       },
-      icon: <Folder className="w-5 h-5 text-primary" />,
+      icon: <Folder className="w-5 h-5 text-emerald-400" />,
       category: ["Software Engg"],
     },
     {
@@ -143,7 +143,7 @@ export function FlagshipProjects() {
       description: "A secure content management system with modern authentication and publishing features.",
       techStack: ["Next.js", "PostgreSQL", "Tailwind"],
       links: {},
-      icon: <Code className="w-5 h-5 text-primary" />,
+      icon: <Code className="w-5 h-5 text-emerald-400" />,
       category: ["Software Engg"],
     },
     {
@@ -152,7 +152,7 @@ export function FlagshipProjects() {
       description: "A Python-based scraping utility to efficiently extract data from complex dom structures.",
       techStack: ["Python", "BeautifulSoup", "Selenium"],
       links: {},
-      icon: <Code className="w-5 h-5 text-primary" />,
+      icon: <Code className="w-5 h-5 text-emerald-400" />,
       category: ["Software Engg", "Data Science"],
     },
     {
@@ -161,7 +161,7 @@ export function FlagshipProjects() {
       description: "A cross-platform mobile application for splitting bills seamlessly among friends.",
       techStack: ["Flutter", "Firebase"],
       links: {},
-      icon: <Code className="w-5 h-5 text-primary" />,
+      icon: <Code className="w-5 h-5 text-emerald-400" />,
       category: ["Software Engg"],
     },
     {
@@ -172,7 +172,7 @@ export function FlagshipProjects() {
       links: {
         github: "https://github.com/TechNxt05/GlobbleCube-ETA-Submission"
       },
-      icon: <Folder className="w-5 h-5 text-primary" />,
+      icon: <Folder className="w-5 h-5 text-emerald-400" />,
       category: ["ML", "Data Science"],
     }
   ];
@@ -188,16 +188,16 @@ export function FlagshipProjects() {
     : allProjects.filter(p => p.category.includes(activeTab));
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-12 bg-background overflow-hidden relative border-t border-border">
+    <section id="projects" className="py-24 px-6 md:px-12 bg-black overflow-hidden relative border-t border-white/5">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         
         {/* Header section */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold tracking-wider uppercase font-mono">
+          <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wider uppercase font-mono">
             Systems / Experiments
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-foreground leading-tight">
-            Research & <span className="text-primary/70">Engineering Projects</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+            Research & <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-500">Engineering Projects</span>
           </h2>
         </div>
 
@@ -209,8 +209,8 @@ export function FlagshipProjects() {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-full text-sm font-mono transition-all ${
                 activeTab === tab
-                  ? "bg-primary text-primary-foreground font-bold shadow-sm"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground border border-border"
+                  ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold shadow-sm"
+                  : "bg-black text-gray-400 hover:bg-white/5 hover:text-white border border-white/10"
               }`}
             >
               {tab}
@@ -221,43 +221,43 @@ export function FlagshipProjects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredProjects.map((project, idx) => (
-            <ThreeDTiltCard key={project.name + idx} maxTilt={2} glowColor="rgba(0,0,0,0)" className="w-full">
-              <div className="bg-card border border-border hover:border-primary/30 rounded-xl p-6 flex flex-col h-full transition-all shadow-sm">
+            <ThreeDTiltCard key={project.name + idx} maxTilt={2} glowColor="rgba(16,185,129,0.15)" className="w-full">
+              <div className="bg-white/2 border border-white/5 hover:border-emerald-500/30 rounded-xl p-6 flex flex-col h-full transition-all shadow-2xl backdrop-blur-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-muted rounded-lg">
+                  <div className="p-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-emerald-400">
                     {project.icon}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-foreground leading-tight">{project.name}</h4>
-                    <p className="text-xs font-mono text-muted-foreground">{project.title}</p>
+                    <h4 className="text-xl font-bold text-white leading-tight">{project.name}</h4>
+                    <p className="text-xs font-mono text-gray-500">{project.title}</p>
                   </div>
                 </div>
                 
-                <p className="text-sm text-muted-foreground font-sans mb-6 flex-grow">
+                <p className="text-sm text-gray-400 font-sans mb-6 flex-grow">
                   {project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map(tech => (
-                    <Badge key={tech} variant="secondary" className="bg-muted text-muted-foreground font-mono text-[10px]">
+                    <Badge key={tech} variant="secondary" className="bg-white/5 text-gray-400 border border-white/5 font-mono text-[10px]">
                       {tech}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="flex items-center gap-3 mt-auto pt-4 border-t border-border">
+                <div className="flex items-center gap-3 mt-auto pt-4 border-t border-white/5">
                   {project.links.github && (
-                    <Link href={project.links.github} target="_blank" className="text-muted-foreground hover:text-foreground">
+                    <Link href={project.links.github} target="_blank" className="text-gray-500 hover:text-emerald-400 transition-colors">
                       <Github size={16} />
                     </Link>
                   )}
                   {project.links.live && (
-                    <Link href={project.links.live} target="_blank" className="text-muted-foreground hover:text-foreground">
+                    <Link href={project.links.live} target="_blank" className="text-gray-500 hover:text-emerald-400 transition-colors">
                       <ExternalLink size={16} />
                     </Link>
                   )}
                   {project.links.npm && (
-                    <Link href={project.links.npm} target="_blank" className="text-muted-foreground hover:text-foreground">
+                    <Link href={project.links.npm} target="_blank" className="text-gray-500 hover:text-emerald-400 transition-colors">
                       <ExternalLink size={16} />
                     </Link>
                   )}
@@ -265,7 +265,7 @@ export function FlagshipProjects() {
                     onClick={() => triggerChatbotQuery(project.name)}
                     variant="ghost"
                     size="sm"
-                    className="text-primary hover:text-primary/80 hover:bg-muted ml-auto text-xs"
+                    className="text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 ml-auto text-xs"
                   >
                     <Bot size={14} className="mr-1.5" /> Ask AI
                   </Button>

@@ -16,13 +16,11 @@ export function Footer() {
         </div>
 
         {/* System Status Indicators */}
-        <div className="flex items-center gap-4 text-xs font-mono text-muted-foreground bg-black/25 px-4 py-2 rounded-full border border-white/5 shadow-inner">
+        <div className="flex items-center gap-4 text-xs font-mono text-gray-500 bg-black/50 px-4 py-2 rounded-full border border-white/5 shadow-inner">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="font-bold text-white/90">All Systems Operational</span>
+            <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
+            <span className="font-bold text-white">All Systems Operational</span>
           </div>
-          <span className="text-white/10">|</span>
-          <span>v3.0.0</span>
         </div>
 
         {/* Action Social Links */}

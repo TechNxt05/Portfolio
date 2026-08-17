@@ -48,20 +48,20 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #F5F5F2;
-  --foreground: #111111;
-  --card: #FFFFFF;
-  --card-foreground: #111111;
-  --popover: #FFFFFF;
-  --popover-foreground: #111111;
-  --primary: #111111;
-  --primary-foreground: #F5F5F2;
-  --secondary: #EBEBE8;
-  --secondary-foreground: #111111;
-  --muted: #EBEBE8;
-  --muted-foreground: #666666;
-  --accent: #EBEBE8;
-  --accent-foreground: #111111;
+  --background: #000000;
+  --foreground: #F5F5F2;
+  --card: #050505;
+  --card-foreground: #F5F5F2;
+  --popover: #050505;
+  --popover-foreground: #F5F5F2;
+  --primary: #F5F5F2;
+  --primary-foreground: #000000;
+  --secondary: #222222;
+  --secondary-foreground: #F5F5F2;
+  --muted: #111111;
+  --muted-foreground: #888888;
+  --accent: #222222;
+  --accent-foreground: #F5F5F2;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #E0E0DD;
   --input: #E0E0DD;
@@ -85,18 +85,18 @@
 }
 
 .dark {
-  --background: #111111;
+  --background: #000000;
   --foreground: #F5F5F2;
-  --card: #161616;
+  --card: #050505;
   --card-foreground: #F5F5F2;
-  --popover: #161616;
+  --popover: #050505;
   --popover-foreground: #F5F5F2;
   --primary: #F5F5F2;
-  --primary-foreground: #111111;
+  --primary-foreground: #000000;
   --secondary: #222222;
   --secondary-foreground: #F5F5F2;
-  --muted: #222222;
-  --muted-foreground: #999999;
+  --muted: #111111;
+  --muted-foreground: #888888;
   --accent: #222222;
   --accent-foreground: #F5F5F2;
   --destructive: oklch(0.577 0.245 27.325);
@@ -147,7 +147,7 @@
 }
 
 @utility dot-matrix {
-  background-image: radial-gradient(rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -158,8 +158,8 @@
 
 @utility circuit-grid {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(17, 17, 17, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 /* Custom scrollbar */
